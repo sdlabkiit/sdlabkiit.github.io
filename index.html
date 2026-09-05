@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SDlab — Sumit Dass Laboratory at KIIT University. Research in 3D imaging, holographic reconstruction, stereo vision, and optical sensing.">
+  <meta name="keywords" content="SDlab, Sumit Dass, KIIT, holographic imaging, stereo vision, optical sensing, 3D imaging, research lab">
+  <meta name="author" content="Dr. Sumit Dass, SDlab KIIT">
+  <meta property="og:title" content="SDlab — 3D Imaging & Optical Sensing · KIIT University">
+  <meta property="og:description" content="Early-stage research group exploring holographic reconstruction, stereo vision, and optical sensing at KIIT Bhubaneswar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sdlab-kiit.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SDlab — 3D Imaging & Optical Sensing · KIIT University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Skip nav for accessibility -->
+<a href="#main" class="skip-nav">Skip to main content</a>
+
+<!-- NAVBAR -->
+<nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-brand">
+    <a href="#top" class="nav-name" aria-label="SDlab home">SDlab</a>
+    <span class="nav-sub">3D IMAGING &amp; OPTICAL SENSING · KIIT UNIVERSITY</span>
+  </div>
+
+  <!-- Hamburger for mobile -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-links" id="nav-links" role="menubar">
+    <a href="#research"     class="nl c1" role="menuitem">Research</a>
+    <a href="#publications" class="nl c2" role="menuitem">Publications</a>
+    <a href="#team"         class="nl c3" role="menuitem">Team</a>
+    <a href="#projects"     class="nl c4" role="menuitem">Projects</a>
+    <a href="#community"    class="nl c5" role="menuitem">Community</a>
+    <a href="#news"         class="nl c6" role="menuitem">News</a>
+    <a href="#contact"      class="nl c7" role="menuitem">Contact</a>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" style="background:none;border:none;color:var(--text);cursor:pointer;padding:8px;margin-left:8px;display:flex;align-items:center;">
+      <i class="ti ti-moon" id="theme-icon" aria-hidden="true" style="font-size:18px;"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- PRISM BAR -->
+<div class="prism" aria-hidden="true">
+  <div class="ps" style="background:#7F77DD"></div>
+  <div class="ps" style="background:#534AB7"></div>
+  <div class="ps" style="background:#378ADD"></div>
+  <div class="ps" style="background:#1D9E75"></div>
+  <div class="ps" style="background:#639922"></div>
+  <div class="ps" style="background:#BA7517"></div>
+  <div class="ps" style="background:#D85A30"></div>
+  <div class="ps" style="background:#D4537E"></div>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-eyebrow">SUMIT DASS LABORATORY · KIIT BHUBANESWAR · EST. 2025</div>
+  <h1 class="hero-title" id="hero-title">3D Imaging &amp;<br>Optical Sensing</h1>
+  <div class="hero-subtitle" lang="hi" aria-label="Drushti — SDlab">दृष्टि · ଦୃଷ୍ଟି · SDlab</div>
+  <p class="hero-desc">We are an early-stage research group at KIIT Deemed to be University exploring 3D imaging — holographic reconstruction, stereo vision, and optical sensing. Our work spans fundamental optics through applied computer vision.</p>
+  <div class="hero-pills">
+    <span class="pill pv">Holographic imaging</span>
+    <span class="pill pt">Stereo vision</span>
+    <span class="pill pa">Optical sensing</span>
+  </div>
+  <div class="hero-cta">
+    <a href="mailto:sumit.dass@kiit.ac.in" class="btn-primary">Join the Lab</a>
+    <a href="#publications" class="btn-outline">View Publications</a>
+    <a href="assets/sdlab-overview.pdf" class="btn-ghost" download aria-label="Download lab overview PDF">
+      <i class="ti ti-download" aria-hidden="true"></i> Lab Overview
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery-wrap">
+  <div class="gallery" id="gallery" role="region" aria-label="Lab image gallery" aria-live="polite">
+    <div class="slides" id="slides" aria-atomic="true">
+
+      <!-- Slides will be populated dynamically from gallery.json -->
+    </div>
+  </div>
+  <div class="gallery-ctrl">
+    <button class="gc-btn" id="prev-btn" onclick="changeSlide(-1)" aria-label="Previous slide">
+      <i class="ti ti-arrow-left" style="font-size:13px;vertical-align:-1px" aria-hidden="true"></i> Prev
+    </button>
+    <div class="gc-dots" id="dots" role="tablist" aria-label="Gallery slides">
+      <!-- Dots will be populated dynamically -->
+    </div>
+    <button class="gc-btn" id="next-btn" onclick="changeSlide(1)" aria-label="Next slide">
+      Next <i class="ti ti-arrow-right" style="font-size:13px;vertical-align:-1px" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+<!-- RESEARCH -->
+<section id="research" aria-labelledby="research-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#7F77DD"></div>
+    <h2 class="sec-label" id="research-heading">RESEARCH AREAS</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="research-grid" id="research-grid">
+    <!-- Research items will be populated from research.json -->
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" aria-labelledby="publications-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#1D9E75"></div>
+    <h2 class="sec-label" id="publications-heading">PUBLICATIONS</h2>
+    <div class="sec-line"></div>
+    <div class="pub-filter" role="group" aria-label="Filter publications">
+      <button class="pf-btn active" data-filter="all" onclick="filterPubs(this,'all')">All</button>
+      <button class="pf-btn" data-filter="journal" onclick="filterPubs(this,'journal')">Journal</button>
+      <button class="pf-btn" data-filter="conference" onclick="filterPubs(this,'conference')">Conference</button>
+      <button class="pf-btn" data-filter="review" onclick="filterPubs(this,'review')">Under Review</button>
+    </div>
+  </div>
+  <div class="pub-list" id="pub-list">
+    <!-- Publications will be populated from publications.json -->
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" aria-labelledby="team-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#BA7517"></div>
+    <h2 class="sec-label" id="team-heading">TEAM</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="team-grid" id="team-grid">
+    <!-- Team members will be populated from team.json -->
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#378ADD"></div>
+    <h2 class="sec-label" id="projects-heading">PROJECTS</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="proj-grid" id="proj-grid">
+    <!-- Projects will be populated from projects.json -->
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" aria-labelledby="community-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#639922"></div>
+    <h2 class="sec-label" id="community-heading">COMMUNITY &amp; OUTREACH</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="comm-list" id="comm-list">
+    <!-- Community and outreach entries will be populated from community.json -->
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" aria-labelledby="news-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#D85A30"></div>
+    <h2 class="sec-label" id="news-heading">NEWS</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="news-list" id="news-list" role="feed" aria-label="Lab news feed">
+    <!-- News entries will be populated from news.json -->
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="sec">
+    <div class="sec-dot" style="background:#D4537E"></div>
+    <h2 class="sec-label" id="contact-heading">CONTACT &amp; JOIN US</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="contact-bar">
+    <div class="cblock">
+      <div class="clabel"><i class="ti ti-mail" style="font-size:15px;vertical-align:-1px" aria-hidden="true"></i> Email</div>
+      <a href="mailto:sumit.dass@kiit.ac.in" class="cval cval-link">sumit.dass@kiit.ac.in</a>
+    </div>
+    <div class="cblock">
+      <div class="clabel"><i class="ti ti-map-pin" style="font-size:15px;vertical-align:-1px" aria-hidden="true"></i> Location</div>
+      <div class="cval">KIIT, Bhubaneswar, Odisha</div>
+    </div>
+    <div class="cblock">
+      <div class="clabel"><i class="ti ti-user-plus" style="font-size:15px;vertical-align:-1px" aria-hidden="true"></i> Openings</div>
+      <div class="cval">PhD &amp; project positions open</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+  <span class="fl">SDlab · Sumit Dass Laboratory · KIIT University · दृष्टि · ଦୃଷ୍ଟି</span>
+  <div class="footer-profile-links" id="footer-profile-links" style="display:flex;gap:12px;font-size:18px;">
+    <!-- Profile links will be injected here -->
+  </div>
+  <div class="footer-links" id="footer-legacy-link">
+    <!-- Legacy link will be injected here if present -->
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="ti ti-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- Dynamic modals will be injected here by JS -->
+<div id="dynamic-modals-container"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

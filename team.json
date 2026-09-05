@@ -1,0 +1,32 @@
+{
+  "_instruction": "List your team members here. If 'isOpenPosition' is true, it displays as a dashed recruitment card instead of a person. Leave links (linkedin, googleScholar) empty if they don't have one.",
+  "items": [
+    {
+      "id": "modal-pi",
+      "name": "Dr. Sumit Dass",
+      "role": "Principal Investigator",
+      "initials": "SD",
+      "color": "#EEEDFE",
+      "textColor": "#3C3489",
+      "email": "sumit.dass@kiit.ac.in",
+      "googleScholar": "#",
+      "linkedin": "#",
+      "orcid": "#",
+      "modalSubtitle": "Principal Investigator · SDlab · KIIT University",
+      "modalDescription": "Founder and PI of SDlab at KIIT School of Electronics Engineering. Research interests span digital holography, optical sensing systems, underwater optical communications, and applied computer vision. Established SDlab in 2025 to build a strong research culture at KIIT in optical imaging and sensing.",
+      "isOpenPosition": false
+    },
+    {
+      "name": "PhD position",
+      "role": "Open · apply below",
+      "icon": "ti-user-plus",
+      "isOpenPosition": true
+    },
+    {
+      "name": "Project student",
+      "role": "Open · apply below",
+      "icon": "ti-user-plus",
+      "isOpenPosition": true
+    }
+  ]
+}

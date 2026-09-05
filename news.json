@@ -1,0 +1,20 @@
+{
+  "_instruction": "List your news updates here. Use 'YYYY-MM-DD' for 'date', and a short display string for 'dateText'.",
+  "items": [
+    {
+      "date": "2025-01-20",
+      "dateText": "Jan 20, 2025",
+      "text": "SDlab established at KIIT School of Electronics Engineering. Space secured and initial equipment procurement begins."
+    },
+    {
+      "date": "2025-02-15",
+      "dateText": "Feb 15, 2025",
+      "text": "Review paper on RIS-assisted UWOC submitted to IEEE J. Oceanic Eng."
+    },
+    {
+      "date": "2025-03-05",
+      "dateText": "Mar 5, 2025",
+      "text": "First holographic reconstruction pipeline successfully tested on the new lab server."
+    }
+  ]
+}

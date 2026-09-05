@@ -1,0 +1,29 @@
+{
+  "_instruction": "Add your lab's photos here. Place the actual image files inside the 'sdlab/data/gallery/' folder. If you don't have an image, leave it blank.",
+  "items": [
+    {
+      "title": "Holographic reconstruction of a test sample — first results from our in-house setup at KIIT.",
+      "image": "holography.jpg",
+      "link": "#projects",
+      "linkText": "View project"
+    },
+    {
+      "title": "Stereo camera rig assembled for depth estimation experiments using OpenCV and Python.",
+      "image": "stereo.jpg",
+      "link": "#projects",
+      "linkText": "Read more"
+    },
+    {
+      "title": "Underwater optical sensing testbed — part of our ongoing collaboration on coastal monitoring.",
+      "image": "sensing.jpg",
+      "link": "#publications",
+      "linkText": "Related paper"
+    },
+    {
+      "title": "Lab setup and workspace at KIIT School of Electronics Engineering.",
+      "image": "lab.jpg",
+      "link": "",
+      "linkText": ""
+    }
+  ]
+}

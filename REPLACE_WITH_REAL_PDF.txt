@@ -1,0 +1,5 @@
+Place your real lab overview PDF here and rename it to:
+  sdlab-overview.pdf
+
+The download link in index.html points to:
+  assets/sdlab-overview.pdf

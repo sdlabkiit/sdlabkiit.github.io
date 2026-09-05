@@ -1,0 +1,53 @@
+{
+  "_instruction": "List your publications here. Paste your raw BibTeX string into the 'bibtex' field. 'type' can be 'journal', 'conference', or 'review' for filtering. Ensure icons use Tabler class names (e.g. 'ti-external-link').",
+  "items": [
+    {
+      "id": "pub1",
+      "type": "journal",
+      "title": "Digital holographic microscopy for 3D morphometry of biological samples",
+      "color": "#7F77DD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "Sumit Dass et al.",
+      "venue": "Optics Express",
+      "year": "2024",
+      "impact": "Demonstrates sub-micron axial resolution for label-free biological imaging using DHM.",
+      "links": [
+        { "text": "DOI", "url": "#", "icon": "ti-external-link" }
+      ],
+      "bibtex": "@article{dass2024dhm,\n  title   = {Digital holographic microscopy for 3D morphometry of biological samples},\n  author  = {Dass, Sumit and others},\n  journal = {Optics Express},\n  year    = {2024}\n}"
+    },
+    {
+      "id": "pub2",
+      "type": "review",
+      "title": "RIS-assisted underwater optical wireless communication: channel models and open challenges",
+      "color": "#1D9E75",
+      "badgeType": "Review",
+      "badgeStatus": "Under Review",
+      "authors": "Sumit Dass et al.",
+      "venue": "IEEE J. Oceanic Eng.",
+      "year": "2025",
+      "impact": "Comprehensive survey of RIS-enabled UWOC systems with channel model comparisons and research gaps.",
+      "links": [
+        { "text": "Link", "url": "#", "icon": "ti-external-link" }
+      ],
+      "bibtex": "@article{dass2025ris,\n  title   = {RIS-assisted underwater optical wireless communication: channel models and open challenges},\n  author  = {Dass, Sumit and others},\n  journal = {IEEE Journal of Oceanic Engineering},\n  year    = {2025},\n  note    = {Under review}\n}"
+    },
+    {
+      "id": "pub3",
+      "type": "conference",
+      "title": "5G lab-validated holographic buoy system for coastal water quality monitoring",
+      "color": "#378ADD",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "Sumit Dass et al.",
+      "venue": "IEEE",
+      "year": "2025",
+      "impact": "First lab-validated prototype integrating 5G connectivity with holographic sensing for marine monitoring.",
+      "links": [
+        { "text": "DOI", "url": "#", "icon": "ti-external-link" }
+      ],
+      "bibtex": "@inproceedings{dass2025buoy,\n  title     = {5G lab-validated holographic buoy system for coastal water quality monitoring},\n  author    = {Dass, Sumit and others},\n  booktitle = {IEEE Conference Proceedings},\n  year      = {2025}\n}"
+    }
+  ]
+}

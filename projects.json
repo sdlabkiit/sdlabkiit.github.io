@@ -1,0 +1,47 @@
+{
+  "_instruction": "List your projects here. If 'isPlaceholder' is true, it displays as a dashed box (like 'More coming soon'). 'status' can be Active, Proposal, In progress, etc.",
+  "items": [
+    {
+      "id": "modal-proj-1",
+      "title": "Stereo depth from monocular rig",
+      "status": "Active",
+      "statusBg": "#E1F5EE",
+      "statusColor": "#085041",
+      "description": "Building a low-cost stereo pipeline using a single calibrated camera with structured motion.",
+      "tags": ["OpenCV", "Python", "Depth estimation", "Stereo"],
+      "modalDescription": "We are building a low-cost stereo depth estimation pipeline using a single calibrated camera with controlled structured motion. By synthesising a second virtual viewpoint through motion-compensated warping, we produce disparity maps comparable to two-camera stereo systems at a fraction of the hardware cost. The system targets applications in low-cost robotics, agricultural monitoring, and embedded depth sensing.",
+      "isPlaceholder": false
+    },
+    {
+      "id": "modal-proj-2",
+      "title": "Holographic buoy system",
+      "status": "Proposal",
+      "statusBg": "#EEEDFE",
+      "statusColor": "#3C3489",
+      "description": "5G-enabled buoy integrating holographic sensing for coastal water quality monitoring.",
+      "tags": ["5G", "Holography", "IoT", "Marine monitoring"],
+      "modalDescription": "A proposed 5G-enabled smart buoy that integrates holographic optical sensing for real-time coastal water quality monitoring. The buoy transmits digital holographic data over a 5G link for onshore processing and visualisation. A lab-validated prototype was demonstrated and submitted as an IEEE conference paper in 2025. The next phase targets open-sea field trials.",
+      "link": "#publications",
+      "linkText": "Read paper",
+      "isPlaceholder": false
+    },
+    {
+      "id": "modal-proj-3",
+      "title": "RIS-UWOC simulation",
+      "status": "In progress",
+      "statusBg": "#FAEEDA",
+      "statusColor": "#633806",
+      "description": "MATLAB modelling of reconfigurable intelligent surfaces for underwater optical channels.",
+      "tags": ["MATLAB", "RIS", "UWOC", "Channel modelling"],
+      "modalDescription": "MATLAB-based modelling and simulation of reconfigurable intelligent surface (RIS)-assisted underwater optical wireless communication (UWOC) channels. We evaluate channel capacity, BER, and path loss under different water turbidity conditions and RIS configurations. Simulation results support our ongoing IEEE J. Oceanic Engineering review paper.",
+      "link": "#publications",
+      "linkText": "Related paper",
+      "isPlaceholder": false
+    },
+    {
+      "title": "More coming soon",
+      "description": "New projects planned for 2025–26.",
+      "isPlaceholder": true
+    }
+  ]
+}

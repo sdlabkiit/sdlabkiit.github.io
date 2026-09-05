@@ -1,0 +1,13 @@
+{
+  "_instruction": "List community and outreach programs here.",
+  "items": [
+    {
+      "title": "Open lab sessions for UG students",
+      "description": "Periodic hands-on demos of holographic and stereo imaging setups, open to all KIIT undergraduates."
+    },
+    {
+      "title": "Science outreach · local schools",
+      "description": "Planned visits to Bhubaneswar schools to demonstrate optical phenomena — light, lenses, and 3D imaging."
+    }
+  ]
+}

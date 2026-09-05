@@ -1,0 +1,49 @@
+{
+  "_instruction": "List your core research areas here. 'color' can be a hex code (like #7F77DD) for the card border. 'icon' is a Tabler icon class name (like 'ti-camera').",
+  "items": [
+    {
+      "id": "modal-holography",
+      "color": "#7F77DD",
+      "icon": "ti-3d-cube-sphere",
+      "title": "Holographic reconstruction",
+      "description": "Digital holography and 3D morphometry of physical and biological samples.",
+      "modalDescription": "We develop digital holographic microscopy (DHM) techniques for label-free 3D imaging of biological and physical samples. Our focus is on phase retrieval algorithms, numerical propagation, and aberration correction for quantitative morphometry. Applications range from cell biology to materials inspection.",
+      "tags": ["DHM", "Phase retrieval", "3D morphometry"],
+      "link": "#publications",
+      "linkText": "View related publications"
+    },
+    {
+      "id": "modal-stereo",
+      "color": "#1D9E75",
+      "icon": "ti-camera",
+      "title": "Stereo & depth imaging",
+      "description": "Disparity estimation and point cloud reconstruction from multi-view systems.",
+      "modalDescription": "We research stereo correspondence and dense depth estimation using calibrated multi-view camera systems. Current work explores low-cost monocular-to-stereo pipelines using structured motion and deep disparity estimation networks, targeting applications in robotics and environmental sensing.",
+      "tags": ["Stereo matching", "Disparity", "Point clouds"],
+      "link": "#projects",
+      "linkText": "View related projects"
+    },
+    {
+      "id": "modal-sensing",
+      "color": "#BA7517",
+      "icon": "ti-wave-sine",
+      "title": "Optical & photonic sensing",
+      "description": "Fibre optic and underwater optical sensing for environmental monitoring.",
+      "modalDescription": "Research on fibre-optic sensor systems and underwater optical wireless communication (UWOC) for environmental and marine monitoring. We model and characterise optical channels using Monte Carlo simulation and experimental measurements, with a focus on RIS-assisted link enhancement.",
+      "tags": ["Fibre optics", "UWOC", "RIS"],
+      "link": "#publications",
+      "linkText": "View related publications"
+    },
+    {
+      "id": "modal-cv",
+      "color": "#378ADD",
+      "icon": "ti-eye",
+      "title": "Applied computer vision",
+      "description": "ML-assisted imaging pipelines and real-time depth processing.",
+      "modalDescription": "We develop ML-assisted imaging pipelines for real-time processing of depth and holographic data. This includes neural network-based reconstruction acceleration, object detection in low-visibility underwater environments, and edge deployment of vision algorithms on embedded systems.",
+      "tags": ["Deep learning", "Real-time vision", "Embedded AI"],
+      "link": "#projects",
+      "linkText": "View related projects"
+    }
+  ]
+}

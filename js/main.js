@@ -482,13 +482,13 @@ async function renderGallery() {
 
 async function renderResearch() {
   const data = await loadJSON('data/research/research.json');
-  if (!data || !data.length) return;
+  if (!data || !data.items || !data.items.length) return;
   const container = document.getElementById('research-grid');
   const modalsContainer = document.getElementById('dynamic-modals-container');
   if (!container) return;
 
   container.innerHTML = '';
-  data.forEach(item => {
+  data.items.forEach(item => {
     container.innerHTML += `
       <div class="rcard" style="border-top-color:${item.color}" tabindex="0" role="button" aria-expanded="false" aria-controls="${item.id}" onclick="openModal('${item.id}')">
         <div class="rcard-icon"><i class="ti ${item.icon}" style="color:${item.color}" aria-hidden="true"></i></div>

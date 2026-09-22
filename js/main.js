@@ -689,23 +689,42 @@ async function renderNews() {
 async function renderProfile() {
   const data = await loadJSON('data/profile/profile.json');
   if (!data) return;
+
   const container = document.getElementById('footer-profile-links');
   const legacyContainer = document.getElementById('footer-legacy-link');
+
   if (!container || !legacyContainer) return;
 
   container.innerHTML = '';
-  if (data.email) container.innerHTML += `<a href="mailto:${data.email}" class="fl fl-link" aria-label="Email"><i class="ti ti-mail" aria-hidden="true"></i></a>`;
-  if (data.linkedin) container.innerHTML += `<a href="${data.linkedin}" class="fl fl-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>`;
-  if (data.github) container.innerHTML += `<a href="${data.github}" class="fl fl-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>`;
-  if (data.googleScholar) container.innerHTML += `<a href="${data.googleScholar}" class="fl fl-link" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ti ti-school" aria-hidden="true"></i></a>`;
-  if (data.orcid) container.innerHTML += `<a href="${data.orcid}" class="fl fl-link" target="_blank" rel="noopener" aria-label="ORCID"><i class="ti ti-id-badge" aria-hidden="true"></i></a>`;
-  if (data.twitter) container.innerHTML += `<a href="${data.twitter}" class="fl fl-link" target="_blank" rel="noopener" aria-label="Twitter"><i class="ti ti-brand-twitter" aria-hidden="true"></i></a>`;
+  legacyContainer.innerHTML = '';
 
-  if (data.oldWebsite) {
-    legacyContainer.innerHTML = `<a href="${data.oldWebsite}" class="fl fl-link" target="_blank" rel="noopener">${data.oldWebsite.replace('https://', '')}</a>`;
-  }
+  if (data.email)
+    container.innerHTML += `<a href="mailto:${data.email}" class="fl fl-link" aria-label="Email"><i class="ti ti-mail" aria-hidden="true"></i></a>`;
+
+  if (data.linkedin)
+    container.innerHTML += `<a href="${data.linkedin}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>`;
+
+  if (data.googleScholar)
+    container.innerHTML += `<a href="${data.googleScholar}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="ti ti-school" aria-hidden="true"></i></a>`;
+
+  if (data.orcid)
+    container.innerHTML += `<a href="${data.orcid}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="ti ti-id-badge" aria-hidden="true"></i></a>`;
+
+  if (data.twitter)
+    container.innerHTML += `<a href="${data.twitter}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="ti ti-brand-x" aria-hidden="true"></i></a>`;
+
+  if (data.instagram)
+    container.innerHTML += `<a href="${data.instagram}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>`;
+
+  if (data.facebook)
+    container.innerHTML += `<a href="${data.facebook}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>`;
+
+  if (data.scopus)
+    container.innerHTML += `<a href="${data.scopus}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Scopus"><i class="ti ti-book" aria-hidden="true"></i></a>`;
+
+  if (data.webOfScience)
+    container.innerHTML += `<a href="${data.webOfScience}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Web of Science"><i class="ti ti-world" aria-hidden="true"></i></a>`;
 }
-
 // Initializer
 async function initDynamicContent() {
   await Promise.all([

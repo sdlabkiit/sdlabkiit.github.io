@@ -1,11 +1,14 @@
 {
-  "_instruction": "Add your personal links here. Leave the value blank if you don't have that link. E.g., \"linkedin\": \"\"",
+  "_instruction": "Add your personal links here. Leave the value blank if you don't have that link.",
   "name": "Dr. Sumit Dass",
   "email": "sumit.dass@kiit.ac.in",
-  "googleScholar": "",
-  "linkedin": "",
-  "orcid": "",
+  "googleScholar": "https://scholar.google.co.in/citations?user=3jIV9_kAAAAJ&hl=en",
+  "linkedin": "https://www.linkedin.com/in/dr-sumit-dass-phd-61209ab4/",
+  "orcid": "https://orcid.org/0000-0002-8617-8509",
   "github": "",
-  "twitter": "",
-  "oldWebsite": "https://sites.google.com/view/sdlab"
+  "twitter": "https://x.com/drsumitdass?s=11",
+  "instagram": "https://www.instagram.com/its_drsumitdass/",
+  "facebook": "https://www.facebook.com/sumit.dass/",
+  "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56533463500",
+  "webOfScience": "https://www.webofscience.com/wos/author/record/L-3311-2016"
 }

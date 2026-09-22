@@ -39,7 +39,7 @@ document.addEventListener('click', e => {
 });
 
 // Active nav link on scroll using IntersectionObserver
-const sectionIds = ['research','publications','team','projects','community','news','contact'];
+const sectionIds = ['research','publications','team','projects','news','contact'];
 const sectionEls = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
 const navObserver = new IntersectionObserver(entries => {
@@ -940,7 +940,7 @@ async function renderProjects() {
                     <span>${item.role}</span>
                   </div>
                 ` : ''}
-                
+
                 ${item.timeline ? `
                   <div class="project-detail">
                     <strong>Timeline:</strong>
@@ -982,38 +982,89 @@ async function renderProjects() {
   });
 }
 
-async function renderCommunity() {
-  const data = await loadJSON('data/community/community.json');
-  if (!data || !data.length) return;
-  const container = document.getElementById('comm-list');
-  if (!container) return;
+// async function renderCommunity() {
+//   const data = await loadJSON('data/community/community.json');
+//   if (!data || !data.length) return;
+//   const container = document.getElementById('comm-list');
+//   if (!container) return;
 
-  container.innerHTML = '';
-  data.forEach(item => {
-    container.innerHTML += `
-      <div class="comm" tabindex="0">
-        <div class="comm-title">${item.title}</div>
-        <p class="comm-desc">${item.description}</p>
-      </div>
-    `;
-  });
-}
+//   container.innerHTML = '';
+//   data.forEach(item => {
+//     container.innerHTML += `
+//       <div class="comm" tabindex="0">
+//         <div class="comm-title">${item.title}</div>
+//         <p class="comm-desc">${item.description}</p>
+//       </div>
+//     `;
+//   });
+// }
 
 async function renderNews() {
   const data = await loadJSON('data/news/news.json');
   if (!data || !data.length) return;
+
   const container = document.getElementById('news-list');
   if (!container) return;
 
   container.innerHTML = '';
-  data.forEach(item => {
+
+  data.forEach((item, index) => {
+    const newsId = `news-details-${index}`;
+
     container.innerHTML += `
-      <article class="news">
-        <time class="ndate" datetime="${item.date}">${item.dateText}</time>
-        <p class="ntext">${item.text}</p>
+      <article class="news-item" tabindex="0">
+
+        <button
+          class="news-highlight"
+          type="button"
+          aria-expanded="false"
+          aria-controls="${newsId}"
+          onclick="toggleNews('${newsId}', this)"
+        >
+          <span class="news-highlight-text">${item.highlight}</span>
+          <i class="ti ti-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <div
+          class="news-details"
+          id="${newsId}"
+          hidden
+        >
+          <p>${item.details}</p>
+
+          ${item.links && item.links.length ? `
+            <div class="news-links">
+              ${item.links.map(link => `
+                <a
+                  href="${link.url}"
+                  class="news-link"
+                  target="_blank"
+                  rel="noopener"
+                  onclick="event.stopPropagation()"
+                >
+                  <i class="ti ${link.icon}" aria-hidden="true"></i>
+                  ${link.text}
+                </a>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+
       </article>
     `;
   });
+}
+
+function toggleNews(id, button) {
+  const details = document.getElementById(id);
+  if (!details) return;
+
+  const isOpen = !details.hidden;
+
+  details.hidden = isOpen;
+  button.setAttribute('aria-expanded', String(!isOpen));
+
+  button.classList.toggle('expanded', !isOpen);
 }
 
 async function renderProfile() {
@@ -1063,7 +1114,7 @@ async function initDynamicContent() {
     renderPublications(),
     renderTeam(),
     renderProjects(),
-    renderCommunity(),
+    // renderCommunity(),
     renderNews(),
     renderProfile()
   ]);

@@ -1,20 +1,47 @@
 {
-  "_instruction": "List your news updates here. Use 'YYYY-MM-DD' for 'date', and a short display string for 'dateText'.",
+  "_instruction": "News and updates for SD Lab. Each item has a short highlight that is shown initially and details revealed when clicked.",
   "items": [
     {
-      "date": "2025-01-20",
-      "dateText": "Jan 20, 2025",
-      "text": "SDlab established at KIIT School of Electronics Engineering. Space secured and initial equipment procurement begins."
+      "id": "news-5g-hackathon-2026",
+      "date": "2026-09-17",
+      "category": "Achievement",
+      "highlight": "Two KIIT teams selected among the Top 50 nationwide in the 5G Innovation Hackathon 2026.",
+      "details": "Two teams from KIIT School of Electronics Engineering secured a place among the Top 50 teams nationwide in the 5G Innovation Hackathon 2026, organized by the Department of Telecommunications, Government of India. The selected teams received prototype development funding and presented their prototype models at the Indian Institute of Science (IISc), Bengaluru, from September 14–17, 2026. Students Narayan, Saurav, Saanvi, and Ustah represented the teams during the prototype presentations.",
+      "links": [
+        {
+          "text": "5G Hackathon",
+          "url": "#",
+          "icon": "ti-world"
+        }
+      ]
     },
     {
-      "date": "2025-02-15",
-      "dateText": "Feb 15, 2025",
-      "text": "Review paper on RIS-assisted UWOC submitted to IEEE J. Oceanic Eng."
+      "id": "news-jsap-saanvi-2026",
+      "date": "2026-09-11",
+      "category": "Conference",
+      "highlight": "Saanvi presents her research at the JSAP–Optica Joint Symposia 2026 in Japan.",
+      "details": "Saanvi presented her research physically at the JSAP–Optica Joint Symposia 2026, held at the Sapporo Campus of Hokkaido University, Japan, from September 8–11, 2026. She was selected as a recipient of the JSAP–Optica Travel Award. Session: 4.1 Plasmonics and Nanophotonics. Presentation: Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications. Program No.: 8a-A22-3. Presentation Type: Oral.",
+      "links": [
+        {
+          "text": "JSAP",
+          "url": "https://meeting.jsap.or.jp/english",
+          "icon": "ti-world"
+        }
+      ]
     },
     {
-      "date": "2025-03-05",
-      "dateText": "Mar 5, 2025",
-      "text": "First holographic reconstruction pipeline successfully tested on the new lab server."
+      "id": "news-jsap-saurav-2026",
+      "date": "2026-09-11",
+      "category": "Conference",
+      "highlight": "Saurav presents his accepted research paper online at the JSAP–Optica Joint Symposia 2026.",
+      "details": "Saurav's research paper was accepted for presentation at the JSAP–Optica Joint Symposia 2026. He presented the work online during the 87th JSAP Autumn Meeting 2026, held September 8–11, 2026, at Hokkaido University, Sapporo, Japan. Session: 4.1 Plasmonics and Nanophotonics. Presentation: Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor. Program No.: 8a-A22-2. Presentation Type: Oral. Presentation Duration: 15 minutes.",
+      "links": [
+        {
+          "text": "JSAP",
+          "url": "https://meeting.jsap.or.jp/english",
+          "icon": "ti-world"
+        }
+      ]
     }
   ]
 }

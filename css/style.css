@@ -685,6 +685,78 @@ section, .contact-bar,
 .ndate { font-size: 12px; color: var(--color-text-ter); min-width: 60px; padding-top: 2px; font-variant-numeric: tabular-nums; }
 .ntext { font-size: 14.5px; color: var(--color-text-primary); line-height: 1.6; }
 
+.news-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 0;
+}
+
+.news-highlight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-text-primary);
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.news-highlight-text {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.news-highlight i {
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.news-highlight.expanded i {
+  transform: rotate(180deg);
+}
+
+.news-highlight:hover {
+  color: var(--accent-blue);
+}
+
+.news-details {
+  padding: 12px 30px 4px 0;
+  color: var(--color-text-sec);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.news-details p {
+  margin: 0 0 12px;
+}
+
+.news-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--accent-blue);
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
 /* ---------- CONTACT ---------- */
 .contact-bar {
   display: grid;

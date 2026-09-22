@@ -536,10 +536,10 @@ async function renderPublications() {
             <i class="ti ti-copy" aria-hidden="true"></i> BibTeX
           </button>
         </div>
-        <p class="pub-meta"><strong>${item.authors}</strong> · ${item.venue} · ${item.year}</p>
+        <p class="pub-meta">${item.authors} · ${item.venue} · ${item.year}</p>
         <p class="pub-impact">${item.impact}</p>
         <div class="pub-links">
-          ${item.links.map(link => `<a href="${link.url}" class="pub-link" aria-label="View ${link.text}"><i class="ti ${link.icon}" aria-hidden="true"></i> ${link.text}</a>`).join('')}
+          ${item.links.map(link => `<a href="${link.url}" class="pub-link" target="_blank" rel="noopener noreferrer" aria-label="View ${link.text}"><i class="ti ${link.icon}" aria-hidden="true"></i> ${link.text}</a>`).join('')}
         </div>
         <textarea class="bibtex-box" id="${bibtexId}" readonly aria-label="BibTeX citation">${item.bibtex}</textarea>
       </article>

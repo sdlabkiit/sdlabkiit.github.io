@@ -928,6 +928,49 @@ async function renderProjects() {
             <span class="pstatus" style="background:${item.statusBg};color:${item.statusColor};margin-bottom:12px;display:inline-block">${item.status}</span>
             <h3 class="modal-title" id="${item.id}-title">${item.title}</h3>
             <p class="modal-body">${item.modalDescription}</p>
+
+            ${item.role || item.fundingAgency || item.identification || item.cost ? `
+              <div class="project-details">
+
+                <h4>Project Details</h4>
+
+                ${item.role ? `
+                  <div class="project-detail">
+                    <strong>Role:</strong>
+                    <span>${item.role}</span>
+                  </div>
+                ` : ''}
+                
+                ${item.timeline ? `
+                  <div class="project-detail">
+                    <strong>Timeline:</strong>
+                    <span>${item.timeline}</span>
+                  </div>
+                ` : ''}
+
+                ${item.fundingAgency ? `
+                  <div class="project-detail">
+                    <strong>Funding Agency:</strong>
+                    <span>${item.fundingAgency}</span>
+                  </div>
+                ` : ''}
+
+                ${item.identification ? `
+                  <div class="project-detail">
+                    <strong>Identification:</strong>
+                    <span>${item.identification}</span>
+                  </div>
+                ` : ''}
+
+                ${item.cost ? `
+                  <div class="project-detail">
+                    <strong>Project Cost:</strong>
+                    <span>${item.cost}</span>
+                  </div>
+                ` : ''}
+
+              </div>
+            ` : ''}
             <div class="modal-tags">
               ${item.tags.map(tag => `<span class="ptag">${tag}</span>`).join('')}
             </div>

@@ -2,19 +2,24 @@
   "_instruction": "Completed and upcoming projects of the Sumit Dass Laboratory.",
   "items": [
     {
-      "id": "tare-ir-spectroscopy",
-      "title": "Development of IR Absorption Spectroscopy System Using Tapered PCF-Based Supercontinuum Source",
+      "id": "modal-proj-tare",
+      "title": "Development of IR Absorption Spectroscopy System Using Tapered PCF-Based Supercontinuum Source.",
       "status": "Completed",
       "statusBg": "#E1F5EE",
       "statusColor": "#085041",
-      "description": "Development of an IR absorption spectroscopy system using a tapered photonic crystal fiber-based supercontinuum source.",
-      "tags": ["IR spectroscopy", "Photonic crystal fiber", "Supercontinuum source"],
-      "modalDescription": "Development of an IR absorption spectroscopy system using a tapered photonic crystal fiber-based supercontinuum source. The project was led by S. Dass and supported by the Science and Engineering Research Board (SERB), Government of India.",
-      "timeline": "2022–2025",
+      "description": "Development of an IR absorption spectroscopy system using a tapered PCF-based supercontinuum source.",
+      "tags": [
+        "Optical fiber",
+        "PCF",
+        "Supercontinuum",
+        "IR spectroscopy"
+      ],
+      "modalDescription": "Development of an IR absorption spectroscopy system using a tapered photonic crystal fiber-based supercontinuum source.",
       "role": "Lead PI",
-      "fundingAgency": "Science and Engineering Research Board (SERB), Government of India",
+      "fundingAgency": "Science and Engineering Research Board, Government of India (SERB)",
       "identification": "SQUID-1987-SD-7145",
       "cost": "₹1,830,000 (3 years)",
+      "timeline": "2022–2025",
       "isPlaceholder": false
     },
     {

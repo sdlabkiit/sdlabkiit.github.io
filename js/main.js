@@ -517,7 +517,7 @@ async function renderResearch() {
 
 async function renderPublications() {
   const data = await loadJSON('data/publications/publications.json');
-  if (!data || !data.length) return;
+  if (!data || !data.items || !data.items.length) return;
   const container = document.getElementById('pub-list');
   if (!container) return;
 

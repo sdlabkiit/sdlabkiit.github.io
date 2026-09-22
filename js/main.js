@@ -554,242 +554,339 @@ async function renderTeam() {
   const container = document.getElementById('team-grid');
   const modalsContainer = document.getElementById('dynamic-modals-container');
 
-  if (!container) return;
+  if (!container || !modalsContainer) return;
 
   container.innerHTML = '';
+  modalsContainer.innerHTML = '';
 
   data.forEach((item, index) => {
+
+    /* ---------- OPEN POSITION ---------- */
     if (item.isOpenPosition) {
-      container.innerHTML += `
-        <div class="tcard tcard-open" tabindex="0" style="border-style:dashed"
-             role="link" aria-label="Open position"
-             onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          <div class="tav" style="background:var(--color-bg);color:var(--color-text-sec)">
-            <i class="ti ${item.icon}" style="font-size:14px" aria-hidden="true"></i>
-          </div>
-          <div class="tname" style="color:var(--color-text-sec)">${item.name}</div>
-          <div class="trole">${item.role}</div>
-        </div>
-      `;
-    } else {
-      const modalId = `modal-team-${index}`;
 
       container.innerHTML += `
-        <div class="tcard" tabindex="0" role="button"
+        <div class="tcard tcard-open"
+             tabindex="0"
+             style="border-style:dashed"
+             role="link"
              aria-label="${item.name}"
-             onclick="openModal('${modalId}')">
+             onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
 
-          <div class="tav" style="background:${item.color};color:${item.textColor}">
-            ${item.initials}
+          <div class="tav"
+               style="background:var(--color-bg);color:var(--color-text-sec)">
+            <i class="ti ${item.icon}"
+               style="font-size:14px"
+               aria-hidden="true"></i>
           </div>
 
-          <div class="tname">${item.name}</div>
-          <div class="trole">${item.role}</div>
-
-          <div class="tlinks">
-
-            ${item.email ? `
-              <a href="mailto:${item.email}"
-                 class="tlink"
-                 aria-label="Email"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-mail" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.googleScholar ? `
-              <a href="${item.googleScholar}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="Google Scholar"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-school" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.linkedin ? `
-              <a href="${item.linkedin}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="LinkedIn"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.orcid ? `
-              <a href="${item.orcid}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="ORCID"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-id-badge" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.twitter ? `
-              <a href="${item.twitter}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="X"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-brand-x" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.instagram ? `
-              <a href="${item.instagram}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="Instagram"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-brand-instagram" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.facebook ? `
-              <a href="${item.facebook}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="Facebook"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-brand-facebook" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.scopus ? `
-              <a href="${item.scopus}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="Scopus"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-book" aria-hidden="true"></i>
-              </a>` : ''}
-
-            ${item.webOfScience ? `
-              <a href="${item.webOfScience}"
-                 class="tlink"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 aria-label="Web of Science"
-                 onclick="event.stopPropagation()">
-                <i class="ti ti-world" aria-hidden="true"></i>
-              </a>` : ''}
-
+          <div class="tname"
+               style="color:var(--color-text-sec)">
+            ${item.name}
           </div>
+
+          <div class="trole">
+            ${item.role}
+          </div>
+
         </div>
       `;
 
-      modalsContainer.innerHTML += `
-        <div class="modal-overlay"
-             id="${modalId}"
-             role="dialog"
-             aria-modal="true"
-             aria-labelledby="${modalId}-title"
-             hidden
-             onclick="closeModalOutside(event)">
+      return;
+    }
 
-          <div class="modal">
+    /* ---------- PERSON ---------- */
 
-            <button class="modal-close"
-                    onclick="closeModal('${modalId}')"
-                    aria-label="Close modal">
-              <i class="ti ti-x" aria-hidden="true"></i>
-            </button>
+    const modalId = item.id || `modal-team-${index}`;
 
-            <div class="tav modal-avatar"
-                 style="background:${item.color};color:${item.textColor}">
-              ${item.initials}
-            </div>
+    const avatar = item.photo
+      ? `<img src="${item.photo}"
+              alt="${item.name}"
+              class="team-photo">`
+      : `${item.initials || ''}`;
 
-            <h3 class="modal-title" id="${modalId}-title">
-              ${item.name}
-            </h3>
+    container.innerHTML += `
+      <div class="tcard"
+           tabindex="0"
+           role="button"
+           aria-label="${item.name}"
+           onclick="openModal('${modalId}')">
 
-            <p class="modal-subtitle">
-              ${item.modalSubtitle}
+        <div class="tav"
+             style="background:${item.color};color:${item.textColor}">
+          ${avatar}
+        </div>
+
+        <div class="tname">
+          ${item.name}
+        </div>
+
+        <div class="trole">
+          ${item.role}
+        </div>
+
+        ${item.association ? `
+          <div class="tassociation">
+            ${item.association}
+          </div>
+        ` : ''}
+
+        <div class="tlinks">
+
+          ${item.email ? `
+            <a href="mailto:${item.email}"
+               class="tlink"
+               aria-label="Email"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-mail" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.googleScholar ? `
+            <a href="${item.googleScholar}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Google Scholar"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-school" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.linkedin ? `
+            <a href="${item.linkedin}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.orcid ? `
+            <a href="${item.orcid}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="ORCID"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-id-badge" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.twitter ? `
+            <a href="${item.twitter}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="X"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-brand-x" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.instagram ? `
+            <a href="${item.instagram}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.facebook ? `
+            <a href="${item.facebook}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-brand-facebook" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.scopus ? `
+            <a href="${item.scopus}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Scopus"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-book" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.webOfScience ? `
+            <a href="${item.webOfScience}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Web of Science"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-world"
+                 aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+        </div>
+      </div>
+    `;
+
+
+    /* ---------- PROFILE MODAL ---------- */
+
+    modalsContainer.innerHTML += `
+      <div class="modal-overlay"
+           id="${modalId}"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="${modalId}-title"
+           hidden
+           onclick="closeModalOutside(event)">
+
+        <div class="modal">
+
+          <button class="modal-close"
+                  onclick="closeModal('${modalId}')"
+                  aria-label="Close modal">
+            <i class="ti ti-x" aria-hidden="true"></i>
+          </button>
+
+          <div class="tav modal-avatar"
+               style="background:${item.color};color:${item.textColor}">
+            ${avatar}
+          </div>
+
+          <h3 class="modal-title"
+              id="${modalId}-title">
+            ${item.name}
+          </h3>
+
+          <p class="modal-subtitle">
+            ${item.modalSubtitle || item.role}
+          </p>
+
+          ${item.association ? `
+            <p class="modal-meta">
+              <strong>Association:</strong> ${item.association}
             </p>
+          ` : ''}
 
+          ${item.modalDescription ? `
             <p class="modal-body">
               ${item.modalDescription}
             </p>
+          ` : ''}
 
-            <div class="modal-links">
+          ${item.education ? `
+            <p class="modal-body">
+              <strong>Education:</strong> ${item.education}
+            </p>
+          ` : ''}
 
-              ${item.email ? `
-                <a href="mailto:${item.email}" class="btn-outline modal-btn">
-                  <i class="ti ti-mail" aria-hidden="true"></i> Email
-                </a>` : ''}
+          ${item.currentPosition ? `
+            <p class="modal-body">
+              <strong>Current position:</strong> ${item.currentPosition}
+            </p>
+          ` : ''}
 
-              ${item.googleScholar ? `
-                <a href="${item.googleScholar}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-school" aria-hidden="true"></i> Google Scholar
-                </a>` : ''}
+          <div class="modal-links">
 
-              ${item.linkedin ? `
-                <a href="${item.linkedin}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
-                </a>` : ''}
+            ${item.email ? `
+              <a href="mailto:${item.email}"
+                 class="btn-outline modal-btn">
+                <i class="ti ti-mail" aria-hidden="true"></i>
+                Email
+              </a>
+            ` : ''}
 
-              ${item.orcid ? `
-                <a href="${item.orcid}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-id-badge" aria-hidden="true"></i> ORCID
-                </a>` : ''}
+            ${item.googleScholar ? `
+              <a href="${item.googleScholar}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-school" aria-hidden="true"></i>
+                Google Scholar
+              </a>
+            ` : ''}
 
-              ${item.twitter ? `
-                <a href="${item.twitter}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-brand-x" aria-hidden="true"></i> X
-                </a>` : ''}
+            ${item.linkedin ? `
+              <a href="${item.linkedin}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            ` : ''}
 
-              ${item.instagram ? `
-                <a href="${item.instagram}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-brand-instagram" aria-hidden="true"></i> Instagram
-                </a>` : ''}
+            ${item.orcid ? `
+              <a href="${item.orcid}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-id-badge" aria-hidden="true"></i>
+                ORCID
+              </a>
+            ` : ''}
 
-              ${item.facebook ? `
-                <a href="${item.facebook}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-brand-facebook" aria-hidden="true"></i> Facebook
-                </a>` : ''}
+            ${item.twitter ? `
+              <a href="${item.twitter}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-brand-x" aria-hidden="true"></i>
+                X
+              </a>
+            ` : ''}
 
-              ${item.scopus ? `
-                <a href="${item.scopus}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-book" aria-hidden="true"></i> Scopus
-                </a>` : ''}
+            ${item.instagram ? `
+              <a href="${item.instagram}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+                Instagram
+              </a>
+            ` : ''}
 
-              ${item.webOfScience ? `
-                <a href="${item.webOfScience}"
-                   class="btn-outline modal-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  <i class="ti ti-world" aria-hidden="true"></i> Web of Science
-                </a>` : ''}
+            ${item.facebook ? `
+              <a href="${item.facebook}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-brand-facebook" aria-hidden="true"></i>
+                Facebook
+              </a>
+            ` : ''}
 
-            </div>
+            ${item.scopus ? `
+              <a href="${item.scopus}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-book" aria-hidden="true"></i>
+                Scopus
+              </a>
+            ` : ''}
+
+            ${item.webOfScience ? `
+              <a href="${item.webOfScience}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-world" aria-hidden="true"></i>
+                Web of Science
+              </a>
+            ` : ''}
+
           </div>
+
         </div>
-      `;
-    }
+      </div>
+    `;
   });
 }
 async function renderProjects() {

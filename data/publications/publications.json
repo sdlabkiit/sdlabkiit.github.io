@@ -1,53 +1,285 @@
 {
-  "_instruction": "List your publications here. Paste your raw BibTeX string into the 'bibtex' field. 'type' can be 'journal', 'conference', or 'review' for filtering. Ensure icons use Tabler class names (e.g. 'ti-external-link').",
+  "_instruction": "Published journal publications of Sumit Dass. DOI links are provided where available.",
   "items": [
     {
       "id": "pub1",
       "type": "journal",
-      "title": "Digital holographic microscopy for 3D morphometry of biological samples",
+      "title": "An in situ stereo-imaging system for characterizing behavior, distributions and aggregations of meso- and macro-zooplankton in diverse aquatic environments",
       "color": "#7F77DD",
       "badgeType": "Journal",
       "badgeStatus": "Published",
-      "authors": "Sumit Dass et al.",
-      "venue": "Optics Express",
-      "year": "2024",
-      "impact": "Demonstrates sub-micron axial resolution for label-free biological imaging using DHM.",
+      "authors": "S. Dass, A. Base, K. Agarwal and A. R. Nayak",
+      "venue": "Limnology and Oceanography: Methods",
+      "year": "2026",
+      "impact": "In situ stereo imaging system for 3D characterization of meso- and macro-zooplankton in aquatic environments.",
       "links": [
-        { "text": "DOI", "url": "#", "icon": "ti-external-link" }
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1002/lom3.70043",
+          "icon": "ti-external-link"
+        }
       ],
-      "bibtex": "@article{dass2024dhm,\n  title   = {Digital holographic microscopy for 3D morphometry of biological samples},\n  author  = {Dass, Sumit and others},\n  journal = {Optics Express},\n  year    = {2024}\n}"
+      "bibtex": "@article{dass2026stereo,\n  author  = {Dass, Sumit and Base, A. and Agarwal, K. and Nayak, A. R.},\n  title   = {An in situ stereo-imaging system for characterizing behavior, distributions and aggregations of meso- and macro-zooplankton in diverse aquatic environments},\n  journal = {Limnology and Oceanography: Methods},\n  volume  = {24},\n  pages   = {1--18},\n  year    = {2026}\n}"
     },
     {
       "id": "pub2",
-      "type": "review",
-      "title": "RIS-assisted underwater optical wireless communication: channel models and open challenges",
+      "type": "journal",
+      "title": "In reflection metal coated diaphragm-based Microphone using PCF modal interferometer",
       "color": "#1D9E75",
-      "badgeType": "Review",
-      "badgeStatus": "Under Review",
-      "authors": "Sumit Dass et al.",
-      "venue": "IEEE J. Oceanic Eng.",
-      "year": "2025",
-      "impact": "Comprehensive survey of RIS-enabled UWOC systems with channel model comparisons and research gaps.",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass, K. Chatterjee, S. Kachhap and R. Jha",
+      "venue": "IEEE Journal of Lightwave Technology",
+      "year": "2021",
+      "impact": "Optical fiber microphone based on a photonic crystal fiber modal interferometer.",
       "links": [
-        { "text": "Link", "url": "#", "icon": "ti-external-link" }
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/JLT.2021.3051951",
+          "icon": "ti-external-link"
+        }
       ],
-      "bibtex": "@article{dass2025ris,\n  title   = {RIS-assisted underwater optical wireless communication: channel models and open challenges},\n  author  = {Dass, Sumit and others},\n  journal = {IEEE Journal of Oceanic Engineering},\n  year    = {2025},\n  note    = {Under review}\n}"
+      "bibtex": "@article{dass2021microphone,\n  author  = {Dass, Sumit and Chatterjee, K. and Kachhap, S. and Jha, R.},\n  title   = {In reflection metal coated diaphragm-based Microphone using PCF modal interferometer},\n  journal = {IEEE Journal of Lightwave Technology},\n  volume  = {39},\n  number  = {12},\n  pages   = {3974--3980},\n  year    = {2021}\n}"
     },
     {
       "id": "pub3",
-      "type": "conference",
-      "title": "5G lab-validated holographic buoy system for coastal water quality monitoring",
-      "color": "#378ADD",
-      "badgeType": "Conference",
+      "type": "journal",
+      "title": "Under Water Low Acoustic Frequency Detection Based on In-line Mach-Zehnder Interferometer",
+      "color": "#BA7517",
+      "badgeType": "Journal",
       "badgeStatus": "Published",
-      "authors": "Sumit Dass et al.",
-      "venue": "IEEE",
-      "year": "2025",
-      "impact": "First lab-validated prototype integrating 5G connectivity with holographic sensing for marine monitoring.",
+      "authors": "S. Dass and R. Jha",
+      "venue": "Journal of the Optical Society of America B",
+      "year": "2021",
+      "impact": "Optical fiber interferometric approach for underwater low-frequency acoustic detection.",
       "links": [
-        { "text": "DOI", "url": "#", "icon": "ti-external-link" }
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1364/JOSAB.410440",
+          "icon": "ti-external-link"
+        }
       ],
-      "bibtex": "@inproceedings{dass2025buoy,\n  title     = {5G lab-validated holographic buoy system for coastal water quality monitoring},\n  author    = {Dass, Sumit and others},\n  booktitle = {IEEE Conference Proceedings},\n  year      = {2025}\n}"
+      "bibtex": "@article{dass2021underwater,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Under Water Low Acoustic Frequency Detection Based on In-line Mach-Zehnder Interferometer},\n  journal = {Journal of the Optical Society of America B},\n  volume  = {38},\n  number  = {2},\n  pages   = {570--575},\n  year    = {2021}\n}"
+    },
+    {
+      "id": "pub4",
+      "type": "journal",
+      "title": "Hearing the sounds of aquatic life using optical fiber micro-tip-based hydrophone",
+      "color": "#378ADD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass, S. Kachhap and R. Jha",
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "year": "2020",
+      "impact": "Optical fiber micro-tip hydrophone for detecting acoustic signals from aquatic environments.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/TIM.2019.2943732",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2020hydrophone,\n  author  = {Dass, Sumit and Kachhap, S. and Jha, R.},\n  title   = {Hearing the sounds of aquatic life using optical fiber micro-tip-based hydrophone},\n  journal = {IEEE Transactions on Instrumentation and Measurement},\n  volume  = {69},\n  number  = {7},\n  pages   = {4015--4020},\n  year    = {2020}\n}"
+    },
+    {
+      "id": "pub5",
+      "type": "journal",
+      "title": "S-shaped Microfiber Based Diaphragm Supported Optical Microphone",
+      "color": "#7F77DD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass, S. Kachhap and R. Jha",
+      "venue": "Journal of Physics: Photonics",
+      "year": "2019",
+      "impact": "Microfiber-based optical microphone using an S-shaped diaphragm structure.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1088/2515-7647/ab1a6c",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2019microphone,\n  author  = {Dass, Sumit and Kachhap, S. and Jha, R.},\n  title   = {S-shaped Microfiber Based Diaphragm Supported Optical Microphone},\n  journal = {Journal of Physics: Photonics},\n  volume  = {1},\n  pages   = {025005},\n  year    = {2019}\n}"
+    },
+    {
+      "id": "pub6",
+      "type": "journal",
+      "title": "Micro-tip Cantilever as Low-Frequency Microphone",
+      "color": "#1D9E75",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass and R. Jha",
+      "venue": "Scientific Reports",
+      "year": "2018",
+      "impact": "Micro-tip cantilever approach for low-frequency acoustic sensing.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1038/s41598-018-31062-9",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2018cantilever,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Micro-tip Cantilever as Low-Frequency Microphone},\n  journal = {Scientific Reports},\n  volume  = {8},\n  pages   = {12701},\n  year    = {2018}\n}"
+    },
+    {
+      "id": "pub7",
+      "type": "journal",
+      "title": "Square Knot Resonator-Based Compact Bending Sensor",
+      "color": "#BA7517",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass and R. Jha",
+      "venue": "IEEE Photonics Technology Letters",
+      "year": "2018",
+      "impact": "Compact optical fiber bending sensor based on a square knot resonator.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/LPT.2018.2857200",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2018squareknot,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Square Knot Resonator-Based Compact Bending Sensor},\n  journal = {IEEE Photonics Technology Letters},\n  volume  = {30},\n  number  = {18},\n  pages   = {1649--1652},\n  year    = {2018}\n}"
+    },
+    {
+      "id": "pub8",
+      "type": "journal",
+      "title": "Tapered Fiber Attached Nitrile Diaphragm-Based Acoustic Sensor",
+      "color": "#378ADD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass and R. Jha",
+      "venue": "IEEE Journal of Lightwave Technology",
+      "year": "2017",
+      "impact": "Optical fiber acoustic sensor using a tapered fiber and nitrile diaphragm.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/JLT.2017.2776519",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2017acoustic,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Tapered Fiber Attached Nitrile Diaphragm-Based Acoustic Sensor},\n  journal = {IEEE Journal of Lightwave Technology},\n  volume  = {35},\n  number  = {24},\n  pages   = {5411--5417},\n  year    = {2017}\n}"
+    },
+    {
+      "id": "pub9",
+      "type": "journal",
+      "title": "Micron wire assisted Inline Mach-Zehnder Interferometric Curvature Sensor",
+      "color": "#7F77DD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass and R. Jha",
+      "venue": "IEEE Photonics Technology Letters",
+      "year": "2016",
+      "impact": "Inline Mach-Zehnder interferometric sensor for optical curvature measurement.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/LPT.2015.2478957",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2016curvature,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Micron wire assisted Inline Mach-Zehnder Interferometric Curvature Sensor},\n  journal = {IEEE Photonics Technology Letters},\n  volume  = {28},\n  number  = {1},\n  pages   = {31--34},\n  year    = {2016}\n}"
+    },
+    {
+      "id": "pub10",
+      "type": "journal",
+      "title": "Intensity-modulated SMF cascaded tapers with a hollow core PCF based microcavity for curvature sensing",
+      "color": "#1D9E75",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass, J. N. Dash and R. Jha",
+      "venue": "Journal of Optics",
+      "year": "2016",
+      "impact": "Photonic crystal fiber microcavity approach for optical curvature sensing.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1088/2040-8978/18/3/035006",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2016curvaturepcf,\n  author  = {Dass, Sumit and Dash, J. N. and Jha, R.},\n  title   = {Intensity-modulated SMF cascaded tapers with a hollow core PCF based microcavity for curvature sensing},\n  journal = {Journal of Optics},\n  volume  = {18},\n  pages   = {035006},\n  year    = {2016}\n}"
+    },
+    {
+      "id": "pub11",
+      "type": "journal",
+      "title": "Microfiber-wrapped bi-conical-tapered SMF for curvature sensing",
+      "color": "#BA7517",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "S. Dass and R. Jha",
+      "venue": "IEEE Sensors Journal",
+      "year": "2016",
+      "impact": "Microfiber-based structure for optical curvature sensing.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/JSEN.2016.2531748",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dass2016microfiber,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Microfiber-wrapped bi-conical-tapered SMF for curvature sensing},\n  journal = {IEEE Sensors Journal},\n  volume  = {16},\n  number  = {10},\n  pages   = {3649--3652},\n  year    = {2016}\n}"
+    },
+    {
+      "id": "pub12",
+      "type": "journal",
+      "title": "Microfiber assisted highly bi-refringent PCF-based interferometric sensors",
+      "color": "#378ADD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "J. N. Dash, S. Dass and R. Jha",
+      "venue": "IEEE Sensors Journal",
+      "year": "2017",
+      "impact": "Interferometric optical fiber sensor using microfiber-assisted highly birefringent photonic crystal fiber.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/JSEN.2016.2628912",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dash2017birefringent,\n  author  = {Dash, J. N. and Dass, Sumit and Jha, R.},\n  title   = {Microfiber assisted highly bi-refringent PCF-based interferometric sensors},\n  journal = {IEEE Sensors Journal},\n  volume  = {17},\n  number  = {5},\n  pages   = {1342--1346},\n  year    = {2017}\n}"
+    },
+    {
+      "id": "pub13",
+      "type": "journal",
+      "title": "Photonic crystal fiber microcavity based bend and temperature sensor using microfiber",
+      "color": "#7F77DD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "J. N. Dash, R. Jha and S. Dass",
+      "venue": "Sensors and Actuators A",
+      "year": "2016",
+      "impact": "Microfiber and photonic crystal fiber microcavity sensor for bend and temperature measurement.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1016/j.sna.2016.04.016",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dash2016bendtemperature,\n  author  = {Dash, J. N. and Jha, R. and Dass, Sumit},\n  title   = {Photonic crystal fiber microcavity based bend and temperature sensor using microfiber},\n  journal = {Sensors and Actuators A},\n  volume  = {244},\n  pages   = {24--29},\n  year    = {2016}\n}"
+    },
+    {
+      "id": "pub14",
+      "type": "journal",
+      "title": "Nano-displacement sensor based on photonic crystal fiber modal interferometer",
+      "color": "#1D9E75",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "J. N. Dash, R. Jha, J. Villatoro and S. Dass",
+      "venue": "Optics Letters",
+      "year": "2015",
+      "impact": "Photonic crystal fiber modal interferometer for nanoscale displacement measurement.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1364/OL.40.000467",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dash2015nanodisplacement,\n  author  = {Dash, J. N. and Jha, R. and Villatoro, J. and Dass, Sumit},\n  title   = {Nano-displacement sensor based on photonic crystal fiber modal interferometer},\n  journal = {Optics Letters},\n  volume  = {40},\n  number  = {4},\n  pages   = {467--470},\n  year    = {2015}\n}"
     }
   ]
 }

@@ -1,49 +1,46 @@
-{
-  "_instruction": "Core research areas of the Sumit Dass Laboratory.",
-  "items": [
-    {
-      "id": "modal-3d-imaging",
-      "color": "#7F77DD",
-      "icon": "ti-3d-cube-sphere",
-      "title": "3D imaging & holography",
-      "description": "Digital holography and 3D imaging for biological and aquatic applications.",
-      "modalDescription": "We develop digital holographic imaging techniques for 3D visualization and characterization of biological and aquatic samples. Our work includes in situ holographic imaging, 3D reconstruction, and automated analysis of microscopic organisms.",
-      "tags": ["Digital holography", "3D imaging", "3D reconstruction"],
-      "link": "#projects",
-      "linkText": "View related projects"
-    },
-    {
-      "id": "modal-stereo",
-      "color": "#1D9E75",
-      "icon": "ti-camera",
-      "title": "Stereo & depth imaging",
-      "description": "In situ stereo imaging for 3D characterization of marine zooplankton.",
-      "modalDescription": "We develop in situ stereo-imaging systems for capturing three-dimensional structural information of marine zooplankton communities. The research combines calibrated multi-camera imaging, depth reconstruction, and image analysis to study the distribution, aggregation, and behavior of aquatic organisms.",
-      "tags": ["Stereo imaging", "Depth reconstruction", "Marine imaging"],
-      "link": "#publications",
-      "linkText": "View related publications"
-    },
-    {
-      "id": "modal-optical-sensing",
-      "color": "#BA7517",
-      "icon": "ti-wave-sine",
-      "title": "Optical fiber sensing",
-      "description": "Fiber-optic sensors for acoustic, curvature, acceleration, humidity, and environmental measurements.",
-      "modalDescription": "We research optical fiber sensor systems based on fiber tapers, photonic crystal fibers, interferometric structures, and microfibers. Applications include acoustic sensing, hydrophone and microphone development, curvature sensing, acceleration measurement, and humidity sensing.",
-      "tags": ["Fiber optics", "Interferometry", "Photonic crystal fiber"],
-      "link": "#publications",
-      "linkText": "View related publications"
-    },
-    {
-      "id": "modal-ai-imaging",
-      "color": "#378ADD",
-      "icon": "ti-eye",
-      "title": "AI-assisted imaging",
-      "description": "CNN-based analysis and automated classification of microscopic organisms.",
-      "modalDescription": "We combine optical imaging with machine learning approaches for automated analysis of biological samples. Our work includes the application of convolutional neural networks (CNNs) to classify microorganisms and support automated analysis of holographic and microscopic image data.",
-      "tags": ["CNN", "Machine learning", "Automated classification"],
-      "link": "#projects",
-      "linkText": "View related projects"
-    }
-  ]
-}
+[
+  {
+    "id": "modal-3d-imaging",
+    "color": "#7F77DD",
+    "icon": "ti-3d-cube-sphere",
+    "title": "3D imaging & holography",
+    "description": "Digital holography and 3D imaging for biological and aquatic applications.",
+    "modalDescription": "We develop digital holographic imaging techniques for 3D visualization and characterization of biological and aquatic samples. Our work includes in situ holographic imaging, 3D reconstruction, and automated analysis of microscopic organisms.",
+    "tags": ["Digital holography", "3D imaging", "3D reconstruction"],
+    "link": "#projects",
+    "linkText": "View related projects"
+  },
+  {
+    "id": "modal-stereo",
+    "color": "#1D9E75",
+    "icon": "ti-camera",
+    "title": "Stereo & depth imaging",
+    "description": "In situ stereo imaging for 3D characterization of marine zooplankton.",
+    "modalDescription": "We develop in situ stereo-imaging systems for capturing three-dimensional structural information of marine zooplankton communities. The research combines calibrated multi-camera imaging, depth reconstruction, and image analysis to study the distribution, aggregation, and behavior of aquatic organisms.",
+    "tags": ["Stereo imaging", "Depth reconstruction", "Marine imaging"],
+    "link": "#publications",
+    "linkText": "View related publications"
+  },
+  {
+    "id": "modal-optical-sensing",
+    "color": "#BA7517",
+    "icon": "ti-wave-sine",
+    "title": "Optical fiber sensing",
+    "description": "Fiber-optic sensors for acoustic, curvature, acceleration, humidity, and environmental measurements.",
+    "modalDescription": "We research optical fiber sensor systems based on fiber tapers, photonic crystal fibers, interferometric structures, and microfibers. Applications include acoustic sensing, hydrophone and microphone development, curvature sensing, acceleration measurement, and humidity sensing.",
+    "tags": ["Fiber optics", "Interferometry", "Photonic crystal fiber"],
+    "link": "#publications",
+    "linkText": "View related publications"
+  },
+  {
+    "id": "modal-ai-imaging",
+    "color": "#378ADD",
+    "icon": "ti-eye",
+    "title": "AI-assisted imaging",
+    "description": "CNN-based analysis and automated classification of microscopic organisms.",
+    "modalDescription": "We combine optical imaging with machine learning approaches for automated analysis of biological samples. Our work includes the application of convolutional neural networks (CNNs) to classify microorganisms and support automated analysis of holographic and microscopic image data.",
+    "tags": ["CNN", "Machine learning", "Automated classification"],
+    "link": "#projects",
+    "linkText": "View related projects"
+  }
+]

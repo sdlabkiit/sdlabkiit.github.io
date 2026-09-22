@@ -517,12 +517,12 @@ async function renderResearch() {
 
 async function renderPublications() {
   const data = await loadJSON('data/publications/publications.json');
-  if (!data || !data.items || !data.items.length) return;
+  if (!data || !data.length) return;
   const container = document.getElementById('pub-list');
   if (!container) return;
 
   container.innerHTML = '';
-  data.items.forEach((item, index) => {
+  data.forEach((item, index) => {
     const bibtexId = `bibtex-dynamic-${index}`;
     container.innerHTML += `
       <article class="pub" style="border-left-color:${item.color}" data-type="${item.type}" tabindex="0">

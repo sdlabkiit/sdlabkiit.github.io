@@ -137,6 +137,7 @@ document.querySelectorAll('.slide').forEach((slide, i) => {
    3. PUBLICATIONS FILTER
    ========================================== */
 function filterPubs(btn, filter) {
+
   // Update button state
   document.querySelectorAll('.pf-btn').forEach(b => {
     b.classList.toggle('active', b === btn);
@@ -146,8 +147,29 @@ function filterPubs(btn, filter) {
   document.querySelectorAll('.pub').forEach(pub => {
     const type = pub.getAttribute('data-type');
     const show = filter === 'all' || type === filter;
+
     pub.style.display = show ? '' : 'none';
     pub.setAttribute('aria-hidden', !show);
+  });
+
+  // Show / hide section headings
+  document.querySelectorAll('.pub-section-heading').forEach(heading => {
+    let next = heading.nextElementSibling;
+    let hasVisiblePublication = false;
+
+    while (next && !next.classList.contains('pub-section-heading')) {
+      if (
+        next.classList.contains('pub') &&
+        next.style.display !== 'none'
+      ) {
+        hasVisiblePublication = true;
+        break;
+      }
+
+      next = next.nextElementSibling;
+    }
+
+    heading.style.display = hasVisiblePublication ? '' : 'none';
   });
 }
 

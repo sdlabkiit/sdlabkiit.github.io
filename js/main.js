@@ -522,7 +522,28 @@ async function renderPublications() {
   if (!container) return;
 
   container.innerHTML = '';
-  data.forEach((item, index) => {
+  let currentSection = '';
+  data.items.forEach((item, index) => {
+    const sectionMap = {
+      journal: 'JOURNAL PUBLICATIONS',
+      conference: 'CONFERENCE PUBLICATIONS',
+      review: 'UNDER REVIEW',
+      'book-chapter': 'BOOK CHAPTERS',
+      patent: 'PATENTS'
+    };
+
+    const sectionTitle = sectionMap[item.type] || '';
+
+    if (sectionTitle && sectionTitle !== currentSection) {
+      currentSection = sectionTitle;
+
+      container.innerHTML += `
+        <div class="pub-section-heading">
+          <span>${sectionTitle}</span>
+          <div></div>
+        </div>
+      `;
+    }
     const bibtexId = `bibtex-dynamic-${index}`;
     container.innerHTML += `
       <article class="pub" style="border-left-color:${item.color}" data-type="${item.type}" tabindex="0">

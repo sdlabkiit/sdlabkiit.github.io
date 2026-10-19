@@ -449,7 +449,7 @@ if (themeToggleBtn) {
 // Data loading
 async function loadJSON(url) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const json = await res.json();
     return json.items !== undefined ? json.items : json;

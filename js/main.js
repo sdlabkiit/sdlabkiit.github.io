@@ -1,12 +1,12 @@
 /* ============================================
-   SDlab — Sumit Dass Laboratory
-   main.js — All interactive functionality
+   SDlab: Sumit Dass Laboratory
+   main.js: All interactive functionality
    ============================================ */
 
 'use strict';
 
 /* ==========================================
-   1. NAVBAR — sticky highlight + hamburger
+   1. NAVBAR: sticky highlight + hamburger
    ========================================== */
 const navbar     = document.getElementById('navbar');
 const hamburger  = document.getElementById('hamburger');
@@ -146,7 +146,8 @@ function filterPubs(btn, filter) {
   // Show / hide publications
   document.querySelectorAll('.pub').forEach(pub => {
     const type = pub.getAttribute('data-type');
-    const show = filter === 'all' || type === filter;
+    const show = filter === 'all' || type === filter ||
+      (filter === 'selected' && pub.getAttribute('data-selected') === 'true');
 
     pub.style.display = show ? '' : 'none';
     pub.setAttribute('aria-hidden', !show);
@@ -409,7 +410,7 @@ if (footerYear) footerYear.textContent = new Date().getFullYear();
 
 
 /* ==========================================
-   14. INIT LOG (development only — remove in prod)
+   14. INIT LOG (development only: remove in prod)
    ========================================== */
 if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
   console.log('%cSDlab site loaded ✓', 'color:#7F77DD;font-weight:600;font-size:13px');
@@ -478,7 +479,7 @@ async function renderGallery() {
     slide.setAttribute('aria-label', `Slide ${index + 1} of ${data.length}`);
     slide.setAttribute('aria-hidden', index !== 0);
 
-    const imgStyle = item.image ? `background: ${item.bg || 'var(--color-bg)'} url('data/gallery/${item.image}') center / contain no-repeat;` : 'background:var(--color-bg)';
+    const imgStyle = item.image ? `background: transparent url('data/gallery/${item.image}') center / contain no-repeat;` : 'background:var(--color-bg)';
     const iconHtml = item.image ? '' : `<i class="ti ti-photo" style="font-size:48px;color:var(--color-border-mid);" aria-hidden="true"></i>`;
 
     slide.innerHTML = `
@@ -503,16 +504,22 @@ async function renderGallery() {
 }
 
 async function renderResearch() {
-  const data = await loadJSON('data/research/research.json');
+  const [data, pubs] = await Promise.all([
+    loadJSON('data/research/research.json'),
+    loadJSON('data/publications/publications.json')
+  ]);
   if (!data || !data.length) return;
   const container = document.getElementById('research-grid');
   const modalsContainer = document.getElementById('dynamic-modals-container');
-  if (!container) return;
+  if (!container || !modalsContainer) return;
+
+  const pubById = {};
+  (pubs || []).forEach(p => { pubById[p.id] = p; });
 
   container.innerHTML = '';
   data.forEach(item => {
     container.innerHTML += `
-      <div class="rcard" style="border-top-color:${item.color}" tabindex="0" role="button" aria-expanded="false" aria-controls="${item.id}" onclick="openModal('${item.id}')">
+      <div class="rcard" style="border-top-color:${item.color}" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="${item.id}" onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('${item.id}')}">
         <div class="rcard-icon"><i class="ti ${item.icon}" style="color:${item.color}" aria-hidden="true"></i></div>
         <div class="rcard-title">${item.title}</div>
         <p class="rcard-desc">${item.description}</p>
@@ -520,21 +527,45 @@ async function renderResearch() {
       </div>
     `;
 
+    const paragraphs = (item.paragraphs || [item.modalDescription || ''])
+      .map(p => `<p class="modal-body">${p}</p>`).join('');
+
+    const related = (item.publications || []).map(id => pubById[id]).filter(Boolean);
+    const relatedHtml = related.length ? `
+      <h4 class="modal-subhead">Related publications</h4>
+      <ul class="modal-pubs">
+        ${related.map(p => {
+          const link = p.links && p.links.length ? p.links[0].url : '';
+          const extra = p.patentNumber ? `, No. ${p.patentNumber}` : '';
+          return `
+          <li style="border-left-color:${p.color || item.color}">
+            <span class="mp-title">${link ? `<a href="${link}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</span>
+            <span class="mp-meta">${p.authors} · ${p.venue}${extra} · ${p.year}</span>
+            <span class="badge mp-badge">${p.badgeStatus}</span>
+          </li>`;
+        }).join('')}
+      </ul>` : '';
+
     modalsContainer.innerHTML += `
       <div class="modal-overlay" id="${item.id}" role="dialog" aria-modal="true" aria-labelledby="${item.id}-title" hidden onclick="closeModalOutside(event)">
-        <div class="modal">
-          <button class="modal-close" onclick="closeModal('${item.id}')" aria-label="Close modal"><i class="ti ti-x" aria-hidden="true"></i></button>
+        <div class="modal modal-wide">
+          <button class="modal-close" onclick="closeModal('${item.id}')" aria-label="Close"><i class="ti ti-x" aria-hidden="true"></i></button>
           <div class="modal-icon" style="color:${item.color}"><i class="ti ${item.icon}" aria-hidden="true"></i></div>
           <h3 class="modal-title" id="${item.id}-title">${item.title}</h3>
-          <p class="modal-body">${item.modalDescription}</p>
+          ${paragraphs}
           <div class="modal-tags">
-            ${item.tags.map(tag => `<span class="ptag">${tag}</span>`).join('')}
+            ${(item.tags || []).map(tag => `<span class="ptag">${tag}</span>`).join('')}
           </div>
-          ${item.link ? `<a href="${item.link}" class="btn-outline modal-btn" onclick="closeModal('${item.id}')">${item.linkText}</a>` : ''}
+          ${relatedHtml}
         </div>
       </div>
     `;
   });
+}
+
+function applyDefaultPubFilter() {
+  const btn = document.querySelector('.pf-btn[data-filter="selected"]');
+  if (btn) filterPubs(btn, 'selected');
 }
 
 async function renderPublications() {
@@ -568,7 +599,7 @@ async function renderPublications() {
     }
     const bibtexId = `bibtex-dynamic-${index}`;
     container.innerHTML += `
-      <article class="pub" style="border-left-color:${item.color}" data-type="${item.type}" tabindex="0">
+      <article class="pub" style="border-left-color:${item.color}" data-type="${item.type}" data-selected="${item.selected ? 'true' : 'false'}" tabindex="0">
         <div class="pub-header">
           <div class="pub-title">
             ${item.title}
@@ -611,7 +642,6 @@ async function renderTeam() {
   if (!container || !modalsContainer) return;
 
   container.innerHTML = '';
-  modalsContainer.innerHTML = '';
 
   data.forEach((item, index) => {
 
@@ -620,6 +650,7 @@ async function renderTeam() {
 
       container.innerHTML += `
         <div class="tcard tcard-open"
+             data-group="present"
              tabindex="0"
              style="border-style:dashed"
              role="link"
@@ -660,6 +691,7 @@ async function renderTeam() {
 
     container.innerHTML += `
       <div class="tcard"
+           data-group="${item.status === 'past' ? 'past' : 'present'}"
            tabindex="0"
            role="button"
            aria-label="${item.name}"
@@ -1109,6 +1141,16 @@ async function renderNews() {
   });
 }
 
+function filterTeam(btn, group) {
+  document.querySelectorAll('.tf-btn').forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('#team-grid .tcard').forEach(card => {
+    const show = card.getAttribute('data-group') === group;
+    card.style.display = show ? '' : 'none';
+    card.setAttribute('aria-hidden', !show);
+  });
+}
+window.filterTeam = filterTeam;
+
 function toggleNews(id, button) {
   const details = document.getElementById(id);
   if (!details) return;
@@ -1172,6 +1214,10 @@ async function initDynamicContent() {
     renderNews(),
     renderProfile()
   ]);
+
+  applyDefaultPubFilter();
+  const presentBtn = document.querySelector('.tf-btn[data-group="present"]');
+  if (presentBtn) filterTeam(presentBtn, 'present');
 
   // Re-run fade-in observer for newly added elements
   document.querySelectorAll('.rcard, .pub, .tcard, .pcard, .comm, .news').forEach(el => {

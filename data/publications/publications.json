@@ -1,5 +1,5 @@
 {
-  "_instruction": "All publications. Keep the 'type' field to one of: journal, conference, review, book-chapter, patent.",
+  "_instruction": "All publications. 'type' is one of: journal, conference, review, book-chapter, patent. Set \"selected\": true on the five shown under the 'Selected 5' tab.",
   "items": [
     {
       "id": "pub1",
@@ -19,7 +19,8 @@
           "icon": "ti-external-link"
         }
       ],
-      "bibtex": "@article{dass2026stereo,\n  author  = {Dass, Sumit and Base, A. and Agarwal, K. and Nayak, A. R.},\n  title   = {An in situ stereo-imaging system for characterizing behavior, distributions and aggregations of meso- and macro-zooplankton in diverse aquatic environments},\n  journal = {Limnology and Oceanography: Methods},\n  volume  = {24},\n  pages   = {1--18},\n  year    = {2026}\n}"
+      "bibtex": "@article{dass2026stereo,\n  author  = {Dass, Sumit and Base, A. and Agarwal, K. and Nayak, A. R.},\n  title   = {An in situ stereo-imaging system for characterizing behavior, distributions and aggregations of meso- and macro-zooplankton in diverse aquatic environments},\n  journal = {Limnology and Oceanography: Methods},\n  volume  = {24},\n  pages   = {1--18},\n  year    = {2026}\n}",
+      "selected": true
     },
     {
       "id": "pub2",
@@ -39,7 +40,8 @@
           "icon": "ti-external-link"
         }
       ],
-      "bibtex": "@article{dass2021microphone,\n  author  = {Dass, Sumit and Chatterjee, K. and Kachhap, S. and Jha, R.},\n  title   = {In reflection metal coated diaphragm-based Microphone using PCF modal interferometer},\n  journal = {IEEE Journal of Lightwave Technology},\n  volume  = {39},\n  number  = {12},\n  pages   = {3974--3980},\n  year    = {2021}\n}"
+      "bibtex": "@article{dass2021microphone,\n  author  = {Dass, Sumit and Chatterjee, K. and Kachhap, S. and Jha, R.},\n  title   = {In reflection metal coated diaphragm-based Microphone using PCF modal interferometer},\n  journal = {IEEE Journal of Lightwave Technology},\n  volume  = {39},\n  number  = {12},\n  pages   = {3974--3980},\n  year    = {2021}\n}",
+      "selected": true
     },
     {
       "id": "pub3",
@@ -79,7 +81,8 @@
           "icon": "ti-external-link"
         }
       ],
-      "bibtex": "@article{dass2020hydrophone,\n  author  = {Dass, Sumit and Kachhap, S. and Jha, R.},\n  title   = {Hearing the sounds of aquatic life using optical fiber micro-tip-based hydrophone},\n  journal = {IEEE Transactions on Instrumentation and Measurement},\n  volume  = {69},\n  number  = {7},\n  pages   = {4015--4020},\n  year    = {2020}\n}"
+      "bibtex": "@article{dass2020hydrophone,\n  author  = {Dass, Sumit and Kachhap, S. and Jha, R.},\n  title   = {Hearing the sounds of aquatic life using optical fiber micro-tip-based hydrophone},\n  journal = {IEEE Transactions on Instrumentation and Measurement},\n  volume  = {69},\n  number  = {7},\n  pages   = {4015--4020},\n  year    = {2020}\n}",
+      "selected": true
     },
     {
       "id": "pub5",
@@ -119,7 +122,8 @@
           "icon": "ti-external-link"
         }
       ],
-      "bibtex": "@article{dass2018cantilever,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Micro-tip Cantilever as Low-Frequency Microphone},\n  journal = {Scientific Reports},\n  volume  = {8},\n  pages   = {12701},\n  year    = {2018}\n}"
+      "bibtex": "@article{dass2018cantilever,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Micro-tip Cantilever as Low-Frequency Microphone},\n  journal = {Scientific Reports},\n  volume  = {8},\n  pages   = {12701},\n  year    = {2018}\n}",
+      "selected": true
     },
     {
       "id": "pub7",
@@ -279,7 +283,8 @@
           "icon": "ti-external-link"
         }
       ],
-      "bibtex": "@article{dash2015nanodisplacement,\n  author  = {Dash, J. N. and Jha, R. and Villatoro, J. and Dass, Sumit},\n  title   = {Nano-displacement sensor based on photonic crystal fiber modal interferometer},\n  journal = {Optics Letters},\n  volume  = {40},\n  number  = {4},\n  pages   = {467--470},\n  year    = {2015}\n}"
+      "bibtex": "@article{dash2015nanodisplacement,\n  author  = {Dash, J. N. and Jha, R. and Villatoro, J. and Dass, Sumit},\n  title   = {Nano-displacement sensor based on photonic crystal fiber modal interferometer},\n  journal = {Optics Letters},\n  volume  = {40},\n  number  = {4},\n  pages   = {467--470},\n  year    = {2015}\n}",
+      "selected": true
     },
     {
       "id": "conf1",
@@ -316,6 +321,19 @@
       "badgeStatus": "Accepted",
       "authors": "<strong>S. Dass</strong> et al.",
       "venue": "IEEE conference",
+      "year": "2026",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "rev2",
+      "type": "review",
+      "title": "A unified model for instrument-agnostic plankton image classification",
+      "color": "#D85A30",
+      "badgeType": "Journal",
+      "badgeStatus": "Under Review",
+      "authors": "J. Womack, <strong>S. Dass</strong>, M. E. Bennett and A. R. Nayak",
+      "venue": "ICES Journal of Marine Science",
       "year": "2026",
       "links": [],
       "bibtex": ""

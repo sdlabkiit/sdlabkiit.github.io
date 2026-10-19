@@ -1,31 +1,27 @@
 {
-  "_instruction": "Gallery slides. Put image files in data/gallery/ and reference them by file name. 'bg' is the backdrop colour shown around the image.",
+  "_instruction": "Gallery slides. Put image files in data/gallery/ and reference them by file name.",
   "items": [
     {
-      "title": "HoloBuoy — our proposed buoy for near real-time, holography-based water quality monitoring, with 5G connectivity for remote coastal sites.",
+      "title": "HoloBuoy: our proposed buoy for near real-time, holography-based water quality monitoring, with 5G connectivity for remote coastal sites.",
       "image": "holobuoy.jpg",
-      "bg": "#0b2a4a",
       "link": "#projects",
       "linkText": "Our projects"
     },
     {
       "title": "A low-cost, single-camera approach to 3D imaging using a smartphone and a 3D-printed stand: stereo pair, disparity map and depth overlay.",
       "image": "single-camera-stereo.jpg",
-      "bg": "#ffffff",
       "link": "#publications",
       "linkText": "Related paper"
     },
     {
-      "title": "Label-free structural and biological characterization of a live mosquito larva via digital holography — 3D position, length and dry mass.",
+      "title": "Label-free structural and biological characterization of a live mosquito larva via digital holography, showing its 3D position, length and dry mass.",
       "image": "mosquito-larva-holography.jpg",
-      "bg": "#000000",
       "link": "#publications",
       "linkText": "Related paper"
     },
     {
-      "title": "D-shaped Zeonex photonic crystal fiber with gold grating for surface-plasmon refractive index sensing — design and simulated mode field.",
+      "title": "D-shaped Zeonex photonic crystal fiber with gold grating for surface-plasmon refractive index sensing: design and simulated mode field.",
       "image": "zeonex-pcf-sensor.jpg",
-      "bg": "#000000",
       "link": "#publications",
       "linkText": "Related papers"
     }

@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SDlab — Sumit Dass Laboratory at KIIT University. Research in 3D imaging, holographic reconstruction, stereo vision, and optical sensing.">
+  <meta name="description" content="SDlab, the Sumit Dass Laboratory at KIIT University. Research in 3D imaging, holographic reconstruction, stereo vision, and optical sensing.">
   <meta name="keywords" content="SDlab, Sumit Dass, KIIT, holographic imaging, stereo vision, optical sensing, 3D imaging, research lab">
   <meta name="author" content="Dr. Sumit Dass, SDlab KIIT">
-  <meta property="og:title" content="SDlab — 3D Imaging & Optical Sensing · KIIT University">
+  <meta property="og:title" content="SDlab | 3D Imaging & Optical Sensing · KIIT University">
   <meta property="og:description" content="Early-stage research group exploring holographic reconstruction, stereo vision, and optical sensing at KIIT Bhubaneswar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sdlabkiit.github.io/">
   <meta property="og:image" content="https://sdlabkiit.github.io/data/gallery/holobuoy.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://sdlabkiit.github.io/">
-  <title>SDlab — 3D Imaging & Optical Sensing · KIIT University</title>
+  <title>SDlab | 3D Imaging & Optical Sensing · KIIT University</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -68,8 +68,8 @@
 <section class="hero" id="top" aria-labelledby="hero-title">
   <div class="hero-eyebrow">SUMIT DASS LABORATORY · KIIT BHUBANESWAR · EST. 2025</div>
   <h1 class="hero-title" id="hero-title">3D Imaging &amp;<br>Optical Sensing</h1>
-  <div class="hero-subtitle" lang="hi" aria-label="Drushti — SDlab">दृष्टि · ଦୃଷ୍ଟି · SDlab</div>
-  <p class="hero-desc">We are an early-stage research group at KIIT Deemed to be University exploring 3D imaging — holographic reconstruction, stereo vision, and optical sensing. Our work spans fundamental optics through applied computer vision.</p>
+  <div class="hero-subtitle" lang="hi" aria-label="Drushti, SDlab">दृष्टि · ଦୃଷ୍ଟି · SDlab</div>
+  <p class="hero-desc">We are an early-stage research group at KIIT Deemed to be University exploring 3D imaging through holographic reconstruction, stereo vision and optical sensing. Our work spans fundamental optics through applied computer vision.</p>
   <div class="hero-pills">
     <span class="pill pv">Holographic imaging</span>
     <span class="pill pt">Stereo vision</span>
@@ -124,7 +124,8 @@
     <h2 class="sec-label" id="publications-heading">PUBLICATIONS</h2>
     <div class="sec-line"></div>
     <div class="pub-filter" role="group" aria-label="Filter publications">
-      <button class="pf-btn active" data-filter="all" onclick="filterPubs(this,'all')">All</button>
+      <button class="pf-btn active" data-filter="selected" onclick="filterPubs(this,'selected')">Selected 5</button>
+      <button class="pf-btn" data-filter="all" onclick="filterPubs(this,'all')">All</button>
       <button class="pf-btn" data-filter="journal" onclick="filterPubs(this,'journal')">Journal</button>
       <button class="pf-btn" data-filter="conference" onclick="filterPubs(this,'conference')">Conference</button>
       <button class="pf-btn" data-filter="book-chapter" onclick="filterPubs(this,'book-chapter')">Book Chapter</button>
@@ -143,6 +144,10 @@
     <div class="sec-dot" style="background:#BA7517"></div>
     <h2 class="sec-label" id="team-heading">TEAM</h2>
     <div class="sec-line"></div>
+    <div class="pub-filter" role="group" aria-label="Filter team members">
+      <button class="pf-btn tf-btn active" data-group="present" onclick="filterTeam(this,'present')">Present members</button>
+      <button class="pf-btn tf-btn" data-group="past" onclick="filterTeam(this,'past')">Past members</button>
+    </div>
   </div>
   <div class="team-grid" id="team-grid">
     <!-- Team members will be populated from team.json -->

@@ -1,5 +1,5 @@
 {
-  "_instruction": "List your team members here. If 'isOpenPosition' is true, it displays as a dashed recruitment card. Leave social/research links blank if unavailable.",
+  "_instruction": "Team members. 'status' is 'present' or 'past' and decides which tab the card appears under. 'isOpenPosition': true shows a dashed recruitment card.",
   "items": [
     {
       "id": "modal-pi",
@@ -18,10 +18,11 @@
       "facebook": "https://www.facebook.com/sumit.dass/",
       "scopus": "https://www.scopus.com/authid/detail.uri?authorId=56533463500",
       "webOfScience": "https://www.webofscience.com/wos/author/record/L-3311-2016",
-      "association": "2025–Present",
+      "association": "",
       "modalSubtitle": "Principal Investigator · SDlab · KIIT University",
       "modalDescription": "Principal Investigator of SDlab at KIIT School of Electronics Engineering. Research interests span digital holography, optical sensing systems, underwater optical communications, and applied computer vision. Established SDlab in 2025 to build a research culture at KIIT in optical imaging and sensing.",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-debarchana",
@@ -45,7 +46,8 @@
       "modalDescription": "Debarchana Sen is a 4th year ECS student working on stereo imaging at SDlab under the guidance of Dr. Sumit Dass.",
       "education": "ECS · KIIT University",
       "currentPosition": "4th Year ECS student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-dipashrita",
@@ -69,7 +71,8 @@
       "modalDescription": "Dipashrita Das is a 4th year ECS student working on stereo imaging at SDlab under the guidance of Dr. Sumit Dass.",
       "education": "ECS · KIIT University",
       "currentPosition": "4th Year ECS student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-saurav",
@@ -88,12 +91,13 @@
       "facebook": "",
       "scopus": "",
       "webOfScience": "",
-      "association": "July 2026–Present",
+      "association": "",
       "modalSubtitle": "3rd Year EC · SDlab · KIIT University",
       "modalDescription": "Saurav Jena is a 3rd year EC student working on stereo imaging and D-shaped photonic crystal fiber sensors at SDlab. Saurav presented this fiber-sensor work at the JSAP–Optica Joint Symposia 2026 and was part of a 5G Innovation Hackathon 2026 Top 35 team.",
       "education": "EC · KIIT University",
       "currentPosition": "3rd Year EC student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-saanvi",
@@ -112,12 +116,13 @@
       "facebook": "",
       "scopus": "",
       "webOfScience": "",
-      "association": "July 2026–Present",
+      "association": "",
       "modalSubtitle": "3rd Year EC · SDlab · KIIT University",
       "modalDescription": "Saanvi Patankar is a 3rd year EC student working on stereo imaging and D-shaped photonic crystal fiber sensors at SDlab. Saanvi presented this fiber-sensor work at the JSAP–Optica Joint Symposia 2026 and was part of a 5G Innovation Hackathon 2026 Top 35 team.",
       "education": "EC · KIIT University",
       "currentPosition": "3rd Year EC student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-narayan",
@@ -136,12 +141,13 @@
       "facebook": "",
       "scopus": "",
       "webOfScience": "",
-      "association": "July 2026–Present",
+      "association": "",
       "modalSubtitle": "3rd Year EC · SDlab · KIIT University",
       "modalDescription": "Narayan Aravind is a 3rd year EC student at SDlab working under the guidance of Dr. Sumit Dass. Narayan was part of a 5G Innovation Hackathon 2026 Top 35 team that presented its prototype at IISc Bengaluru and India Mobile Congress 2026.",
       "education": "EC · KIIT University",
       "currentPosition": "3rd Year EC student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-ustah",
@@ -160,12 +166,13 @@
       "facebook": "",
       "scopus": "",
       "webOfScience": "",
-      "association": "July 2026–Present",
+      "association": "",
       "modalSubtitle": "3rd Year EC · SDlab · KIIT University",
       "modalDescription": "Ustah Puspalak is a 3rd year EC student at SDlab working under the guidance of Dr. Sumit Dass. Ustah was part of a 5G Innovation Hackathon 2026 Top 35 team that presented its prototype at IISc Bengaluru and India Mobile Congress 2026.",
       "education": "EC · KIIT University",
       "currentPosition": "3rd Year EC student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-rushati",
@@ -189,7 +196,8 @@
       "modalDescription": "Rushati Maji is a 3rd year EC student at SDlab working under the guidance of Dr. Sumit Dass.",
       "education": "EC · KIIT University",
       "currentPosition": "3rd Year EC student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-gurudutta",
@@ -213,7 +221,8 @@
       "modalDescription": "Gurudutta Panda is a 2nd year Biotechnology student working on digital holography at SDlab under the guidance of Dr. Sumit Dass.",
       "education": "Biotechnology · KIIT University",
       "currentPosition": "2nd Year Biotechnology student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-anushree",
@@ -237,7 +246,8 @@
       "modalDescription": "Anushree Dash is a 2nd year Biotechnology student working on digital holography at SDlab under the guidance of Dr. Sumit Dass. She is first author of the lab's paper on label-free holographic characterization of mosquito larvae, submitted to Photonics 2026.",
       "education": "Biotechnology · KIIT University",
       "currentPosition": "2nd Year Biotechnology student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "id": "modal-anirban",
@@ -261,19 +271,47 @@
       "modalDescription": "Anirban Mandal is a 2nd year Biotechnology student working on digital holography at SDlab under the guidance of Dr. Sumit Dass.",
       "education": "Biotechnology · KIIT University",
       "currentPosition": "2nd Year Biotechnology student",
-      "isOpenPosition": false
+      "isOpenPosition": false,
+      "status": "present"
     },
     {
       "name": "PhD position",
       "role": "Open · apply below",
       "icon": "ti-user-plus",
-      "isOpenPosition": true
+      "isOpenPosition": true,
+      "status": "present"
     },
     {
       "name": "Project student",
       "role": "Open · apply below",
       "icon": "ti-user-plus",
-      "isOpenPosition": true
+      "isOpenPosition": true,
+      "status": "present"
+    },
+    {
+      "id": "modal-prateekshya",
+      "name": "Prateekshya Dash",
+      "role": "M.Tech., 2020–2022",
+      "initials": "PD",
+      "photo": "data/team/Prateekshya.jpg",
+      "color": "#E6F1FB",
+      "textColor": "#0C447C",
+      "email": "",
+      "googleScholar": "",
+      "linkedin": "",
+      "orcid": "",
+      "twitter": "",
+      "instagram": "",
+      "facebook": "",
+      "scopus": "",
+      "webOfScience": "",
+      "association": "",
+      "modalSubtitle": "M.Tech. · SDlab alumna",
+      "modalDescription": "Prateekshya Dash completed her M.Tech. under the guidance of Dr. Sumit Dass (2020–2022). She is a co-author of the lab's 2026 papers on D-shaped Zeonex photonic crystal fiber sensors.",
+      "education": "M.Tech.",
+      "currentPosition": "",
+      "isOpenPosition": false,
+      "status": "past"
     }
   ]
 }

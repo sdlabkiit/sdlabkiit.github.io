@@ -1,46 +1,92 @@
 [
   {
-    "id": "modal-3d-imaging",
+    "id": "modal-holography",
     "color": "#7F77DD",
     "icon": "ti-3d-cube-sphere",
-    "title": "3D imaging & holography",
-    "description": "Digital holography and 3D imaging for biological and aquatic applications.",
-    "modalDescription": "We develop digital holographic imaging techniques for 3D visualization and characterization of biological and aquatic samples. Our work includes in situ holographic imaging, 3D reconstruction, and automated analysis of microscopic organisms.",
-    "tags": ["Digital holography", "3D imaging", "3D reconstruction"],
-    "link": "#projects",
-    "linkText": "View related projects"
+    "title": "Digital holography",
+    "description": "Label-free 3D imaging of living microorganisms, from mosquito larvae to marine plankton.",
+    "paragraphs": [
+      "We use inline digital holography to image living microorganisms in 3D without staining, fixing or dissecting them. A single hologram records the whole sample volume, and numerical reconstruction recovers each organism's 3D position, orientation, size and shape. The phase information also gives dry mass, a label-free measure of biomass.",
+      "Our current work characterizes live mosquito larvae suspended in water. From the reconstructed holograms we measure body length, centroid location, orientation and dry mass of individual larvae, giving vector biologists a way to study larvae across life stages without sacrificing them.",
+      "We are also developing HoloBuoy, a proposed solar-powered buoy carrying a submerged holographic imager that sends data over 5G for near real-time water quality monitoring at remote coastal sites. It builds on Dr. Dass's work on in situ holographic and stereo imaging of marine plankton at Harbor Branch Oceanographic Institute, Florida Atlantic University."
+    ],
+    "tags": [
+      "Inline holography",
+      "3D reconstruction",
+      "Dry mass",
+      "Water quality"
+    ],
+    "publications": [
+      "rev1"
+    ]
   },
   {
     "id": "modal-stereo",
     "color": "#1D9E75",
     "icon": "ti-camera",
-    "title": "Stereo & depth imaging",
-    "description": "In situ stereo imaging for 3D characterization of marine zooplankton.",
-    "modalDescription": "We develop in situ stereo-imaging systems for capturing three-dimensional structural information of marine zooplankton communities. The research combines calibrated multi-camera imaging, depth reconstruction, and image analysis to study the distribution, aggregation, and behavior of aquatic organisms.",
-    "tags": ["Stereo imaging", "Depth reconstruction", "Marine imaging"],
-    "link": "#publications",
-    "linkText": "View related publications"
+    "title": "Stereo imaging",
+    "description": "Calibrated stereo systems for depth and 3D measurement, in the ocean and on the bench.",
+    "paragraphs": [
+      "Stereo imaging recovers depth by comparing two views of the same scene. We build calibrated stereo systems along with the processing pipeline that turns image pairs into 3D measurements: camera calibration, rectification, disparity estimation and depth reconstruction.",
+      "In the field, our in situ stereo-imaging system characterizes the behavior, distributions and aggregations of meso- and macro-zooplankton in diverse aquatic environments. This work, done with FAU Harbor Branch, was published in Limnology and Oceanography: Methods (2026).",
+      "In the lab, our students built a low-cost single-camera stereo system. A smartphone slides along a 3D-printed stand to capture two viewpoints, checkerboard calibration fixes the geometry, and a two-pass disparity algorithm produces depth maps that agree closely with measured distances. It makes 3D imaging affordable for teaching and field use."
+    ],
+    "tags": [
+      "Stereo vision",
+      "Camera calibration",
+      "Depth maps",
+      "Zooplankton"
+    ],
+    "publications": [
+      "pub1",
+      "conf3"
+    ]
   },
   {
     "id": "modal-optical-sensing",
     "color": "#BA7517",
     "icon": "ti-wave-sine",
     "title": "Optical fiber sensing",
-    "description": "Fiber-optic sensors for acoustic, curvature, acceleration, humidity, and environmental measurements.",
-    "modalDescription": "We research optical fiber sensor systems based on fiber tapers, photonic crystal fibers, interferometric structures, and microfibers. Applications include acoustic sensing, hydrophone and microphone development, curvature sensing, acceleration measurement, and humidity sensing.",
-    "tags": ["Fiber optics", "Interferometry", "Photonic crystal fiber"],
-    "link": "#publications",
-    "linkText": "View related publications"
+    "description": "Interferometric and plasmonic fiber sensors for sound, motion, curvature and bio-sensing.",
+    "paragraphs": [
+      "Dr. Dass's doctoral work at IIT Bhubaneswar developed compact interferometric sensors from tapered single-mode fibers, microfibers and photonic crystal fibers (PCF). These include optical microphones and hydrophones that pick up low-frequency underwater sound, nano-displacement and micro-g acceleration sensors, and curvature, bend and temperature sensors. Two of these designs are granted Indian patents.",
+      "At SDlab we are extending this toward biological sensing. Our students designed a D-shaped solid-core PCF made of Zeonex, a bio-compatible polymer, with a gold grating on its polished face. COMSOL simulations show surface plasmon resonance near 978 nm and a refractive-index sensitivity of 10.95 nm/RIU. The designs were presented at the JSAP-Optica Joint Symposia 2026 in Sapporo, Japan."
+    ],
+    "tags": [
+      "Fiber interferometers",
+      "Photonic crystal fiber",
+      "Surface plasmon resonance",
+      "Hydrophones"
+    ],
+    "publications": [
+      "conf2",
+      "conf1",
+      "book1",
+      "pub4",
+      "pub3",
+      "pub6",
+      "pub14",
+      "patent1",
+      "patent2"
+    ]
   },
   {
     "id": "modal-ai-imaging",
     "color": "#378ADD",
     "icon": "ti-eye",
     "title": "AI-assisted imaging",
-    "description": "CNN-based analysis and automated classification of microscopic organisms.",
-    "modalDescription": "We combine optical imaging with machine learning approaches for automated analysis of biological samples. Our work includes the application of convolutional neural networks (CNNs) to classify microorganisms and support automated analysis of holographic and microscopic image data.",
-    "tags": ["CNN", "Machine learning", "Automated classification"],
-    "link": "#projects",
-    "linkText": "View related projects"
+    "description": "Deep learning that classifies organisms automatically across many imaging instruments.",
+    "paragraphs": [
+      "Holographic, stereo and microscope imagers produce far more images than anyone can label by hand. We use deep learning to classify organisms automatically, so that imaging data becomes ecological information quickly.",
+      "With FAU Harbor Branch, we pooled 14 labelled plankton datasets from 9 different imaging systems into one taxonomically aligned dataset, Linnaeus475, and trained a single transformer classifier (BEiT) on it. The model reaches 87.9% balanced accuracy across 475 classes and holds up across instruments, a step toward one classifier for many plankton imagers."
+    ],
+    "tags": [
+      "Deep learning",
+      "Vision transformers",
+      "Plankton classification"
+    ],
+    "publications": [
+      "rev2"
+    ]
   }
 ]

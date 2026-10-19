@@ -1,6 +1,6 @@
 /* ============================================
-   SDlab — Sumit Dass Laboratory
-   style.css — Full responsive stylesheet
+   SDlab: Sumit Dass Laboratory
+   style.css: Full responsive stylesheet
    ============================================ */
 
 /* ---------- CSS CUSTOM PROPERTIES ---------- */
@@ -909,7 +909,7 @@ section, .contact-bar,
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
-   RESPONSIVE — LARGE DESKTOP (≥ 1280px)
+   RESPONSIVE: LARGE DESKTOP (≥ 1280px)
    ============================================ */
 @media (min-width: 1280px) {
   .hero-title { font-size: 56px; }
@@ -943,7 +943,7 @@ section, .contact-bar,
 }
 
 /* ============================================
-   RESPONSIVE — TABLET (≤ 768px)
+   RESPONSIVE: TABLET (≤ 768px)
    ============================================ */
 @media (max-width: 768px) {
 
@@ -993,7 +993,7 @@ section, .contact-bar,
 }
 
 /* ============================================
-   RESPONSIVE — MOBILE (≤ 480px)
+   RESPONSIVE: MOBILE (≤ 480px)
    ============================================ */
 @media (max-width: 480px) {
 
@@ -1038,7 +1038,7 @@ section, .contact-bar,
 }
 
 /* ============================================
-   RESPONSIVE — VERY SMALL (≤ 340px)
+   RESPONSIVE: VERY SMALL (≤ 340px)
    ============================================ */
 @media (max-width: 340px) {
   .team-grid { grid-template-columns: 1fr; }
@@ -1075,3 +1075,15 @@ section, .contact-bar,
   font-size: 12.5px;
   color: var(--color-text-sec);
 }
+/* Research detail modal */
+.modal-wide { max-width: 680px; }
+.modal-wide .modal-body { margin-bottom: 12px; }
+.modal-subhead { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-sec); font-weight: 600; margin: 22px 0 10px; }
+.modal-pubs { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.modal-pubs li { border-left: 3px solid var(--color-border-mid); padding: 2px 0 2px 12px; display: flex; flex-direction: column; gap: 3px; }
+.mp-title { font-size: 14px; color: var(--color-text-primary); line-height: 1.4; }
+.mp-title a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-border-mid); text-underline-offset: 3px; }
+.mp-title a:hover { text-decoration-color: currentColor; }
+.mp-meta { font-size: 12.5px; color: var(--color-text-ter); line-height: 1.45; }
+.mp-badge { align-self: flex-start; background: #EAF3DE; color: #27500A; }
+.slide-img { background-color: transparent; }

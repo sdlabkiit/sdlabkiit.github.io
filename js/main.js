@@ -478,11 +478,11 @@ async function renderGallery() {
     slide.setAttribute('aria-label', `Slide ${index + 1} of ${data.length}`);
     slide.setAttribute('aria-hidden', index !== 0);
 
-    const imgStyle = item.image ? `background-image: url('data/gallery/${item.image}'); background-size: cover; background-position: center;` : 'background:var(--color-bg)';
+    const imgStyle = item.image ? `background: ${item.bg || 'var(--color-bg)'} url('data/gallery/${item.image}') center / contain no-repeat;` : 'background:var(--color-bg)';
     const iconHtml = item.image ? '' : `<i class="ti ti-photo" style="font-size:48px;color:var(--color-border-mid);" aria-hidden="true"></i>`;
 
     slide.innerHTML = `
-      <div class="slide-img" style="${imgStyle}">
+      <div class="slide-img" style="${imgStyle}" role="img" aria-label="${item.title.replace(/"/g, '&quot;')}">
         ${iconHtml}
       </div>
       <div class="slide-caption">
@@ -545,7 +545,7 @@ async function renderPublications() {
 
   container.innerHTML = '';
   let currentSection = '';
-  data.items.forEach((item, index) => {
+  data.forEach((item, index) => {
     const sectionMap = {
       journal: 'JOURNAL PUBLICATIONS',
       conference: 'CONFERENCE PUBLICATIONS',

@@ -1,5 +1,5 @@
 {
-  "_instruction": "Published journal publications of Sumit Dass. DOI links are provided where available.",
+  "_instruction": "All publications. Keep the 'type' field to one of: journal, conference, review, book-chapter, patent.",
   "items": [
     {
       "id": "pub1",
@@ -281,7 +281,58 @@
       ],
       "bibtex": "@article{dash2015nanodisplacement,\n  author  = {Dash, J. N. and Jha, R. and Villatoro, J. and Dass, Sumit},\n  title   = {Nano-displacement sensor based on photonic crystal fiber modal interferometer},\n  journal = {Optics Letters},\n  volume  = {40},\n  number  = {4},\n  pages   = {467--470},\n  year    = {2015}\n}"
     },
-    
+    {
+      "id": "conf1",
+      "type": "conference",
+      "title": "Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Presented",
+      "authors": "S. Patankar, S. Jena, P. Dash and <strong>S. Dass</strong>",
+      "venue": "JSAP–Optica Joint Symposia 2026 (87th JSAP Autumn Meeting), Hokkaido University, Sapporo, Japan · Paper 8a-A22-3",
+      "year": "2026",
+      "links": [],
+      "bibtex": "@inproceedings{patankar2026dpcf,\n  author    = {Patankar, Saanvi and Jena, Saurav and Dash, Prateekshya and Dass, Sumit},\n  title     = {Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications},\n  booktitle = {JSAP--Optica Joint Symposia 2026},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
+    },
+    {
+      "id": "conf2",
+      "type": "conference",
+      "title": "Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Presented",
+      "authors": "S. Jena, S. Patankar, P. Dash and <strong>S. Dass</strong>",
+      "venue": "JSAP–Optica Joint Symposia 2026 (87th JSAP Autumn Meeting), Hokkaido University, Sapporo, Japan · Paper 8a-A22-2",
+      "year": "2026",
+      "links": [],
+      "bibtex": "@inproceedings{jena2026zeonex,\n  author    = {Jena, Saurav and Patankar, Saanvi and Dash, Prateekshya and Dass, Sumit},\n  title     = {Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor},\n  booktitle = {JSAP--Optica Joint Symposia 2026},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
+    },
+    {
+      "id": "conf3",
+      "type": "conference",
+      "title": "A Low-Cost, Single-Camera Approach to 3D Imaging Using Smartphone Camera and a 3D-Printed Stand",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Accepted",
+      "authors": "<strong>S. Dass</strong> et al.",
+      "venue": "IEEE conference",
+      "year": "2026",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "rev1",
+      "type": "review",
+      "title": "Label-Free Structural and Biological Characterization of Mosquito Larvae via Digital Holography",
+      "color": "#D85A30",
+      "badgeType": "Conference",
+      "badgeStatus": "Submitted",
+      "authors": "A. Dash, A. R. Nayak and <strong>S. Dass</strong>",
+      "venue": "17th International Conference on Fiber Optics &amp; Photonics (Photonics 2026), IIT Hyderabad",
+      "year": "2026",
+      "links": [],
+      "bibtex": ""
+    },
     {
       "id": "book1",
       "type": "book-chapter",
@@ -302,7 +353,6 @@
       ],
       "bibtex": "@incollection{dass2026optical,\nauthor = {Dass, S.},\ntitle = {Optical Biosensing Through Surface Plasmon Resonance: A Review of Techniques and Trends},\nbooktitle = {Advanced Photonic Devices for Energy and Sensing Applications},\npublisher = {CRC Press},\nyear = {2026},\nchapter = {8},\ndoi = {10.1201/9781003654667-8}\n}"
     },
-
     {
       "id": "patent1",
       "type": "patent",
@@ -318,7 +368,6 @@
       "links": [],
       "bibtex": ""
     },
-
     {
       "id": "patent2",
       "type": "patent",
@@ -334,7 +383,6 @@
       "links": [],
       "bibtex": ""
     },
-
     {
       "id": "patent3",
       "type": "patent",

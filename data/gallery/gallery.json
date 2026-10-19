@@ -1,29 +1,33 @@
 {
-  "_instruction": "Add your lab's photos here. Place the actual image files inside the 'sdlab/data/gallery/' folder. If you don't have an image, leave it blank.",
+  "_instruction": "Gallery slides. Put image files in data/gallery/ and reference them by file name. 'bg' is the backdrop colour shown around the image.",
   "items": [
     {
-      "title": "Holographic reconstruction of a test sample — first results from our in-house setup at KIIT.",
-      "image": "holography.jpg",
+      "title": "HoloBuoy — our proposed buoy for near real-time, holography-based water quality monitoring, with 5G connectivity for remote coastal sites.",
+      "image": "holobuoy.jpg",
+      "bg": "#0b2a4a",
       "link": "#projects",
-      "linkText": "View project"
+      "linkText": "Our projects"
     },
     {
-      "title": "Stereo camera rig assembled for depth estimation experiments using OpenCV and Python.",
-      "image": "stereo.jpg",
-      "link": "#projects",
-      "linkText": "Read more"
-    },
-    {
-      "title": "Underwater optical sensing testbed — part of our ongoing collaboration on coastal monitoring.",
-      "image": "sensing.jpg",
+      "title": "A low-cost, single-camera approach to 3D imaging using a smartphone and a 3D-printed stand: stereo pair, disparity map and depth overlay.",
+      "image": "single-camera-stereo.jpg",
+      "bg": "#ffffff",
       "link": "#publications",
       "linkText": "Related paper"
     },
     {
-      "title": "Lab setup and workspace at KIIT School of Electronics Engineering.",
-      "image": "lab.jpg",
-      "link": "",
-      "linkText": ""
+      "title": "Label-free structural and biological characterization of a live mosquito larva via digital holography — 3D position, length and dry mass.",
+      "image": "mosquito-larva-holography.jpg",
+      "bg": "#000000",
+      "link": "#publications",
+      "linkText": "Related paper"
+    },
+    {
+      "title": "D-shaped Zeonex photonic crystal fiber with gold grating for surface-plasmon refractive index sensing — design and simulated mode field.",
+      "image": "zeonex-pcf-sensor.jpg",
+      "bg": "#000000",
+      "link": "#publications",
+      "linkText": "Related papers"
     }
   ]
 }

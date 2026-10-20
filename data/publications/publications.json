@@ -166,6 +166,26 @@
       "bibtex": "@article{dass2017acoustic,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Tapered Fiber Attached Nitrile Diaphragm-Based Acoustic Sensor},\n  journal = {IEEE Journal of Lightwave Technology},\n  volume  = {35},\n  number  = {24},\n  pages   = {5411--5417},\n  year    = {2017}\n}"
     },
     {
+      "id": "pub12",
+      "type": "journal",
+      "title": "Microfiber assisted highly bi-refringent PCF-based interferometric sensors",
+      "color": "#378ADD",
+      "badgeType": "Journal",
+      "badgeStatus": "Published",
+      "authors": "J. N. Dash, <strong>S. Dass</strong> and R. Jha",
+      "venue": "IEEE Sensors Journal",
+      "year": "2017",
+      "impact": "Interferometric optical fiber sensor using microfiber-assisted highly birefringent photonic crystal fiber.",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1109/JSEN.2016.2628912",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@article{dash2017birefringent,\n  author  = {Dash, J. N. and Dass, Sumit and Jha, R.},\n  title   = {Microfiber assisted highly bi-refringent PCF-based interferometric sensors},\n  journal = {IEEE Sensors Journal},\n  volume  = {17},\n  number  = {5},\n  pages   = {1342--1346},\n  year    = {2017}\n}"
+    },
+    {
       "id": "pub9",
       "type": "journal",
       "title": "Micron wire assisted Inline Mach-Zehnder Interferometric Curvature Sensor",
@@ -224,26 +244,6 @@
         }
       ],
       "bibtex": "@article{dass2016microfiber,\n  author  = {Dass, Sumit and Jha, R.},\n  title   = {Microfiber-wrapped bi-conical-tapered SMF for curvature sensing},\n  journal = {IEEE Sensors Journal},\n  volume  = {16},\n  number  = {10},\n  pages   = {3649--3652},\n  year    = {2016}\n}"
-    },
-    {
-      "id": "pub12",
-      "type": "journal",
-      "title": "Microfiber assisted highly bi-refringent PCF-based interferometric sensors",
-      "color": "#378ADD",
-      "badgeType": "Journal",
-      "badgeStatus": "Published",
-      "authors": "J. N. Dash, <strong>S. Dass</strong> and R. Jha",
-      "venue": "IEEE Sensors Journal",
-      "year": "2017",
-      "impact": "Interferometric optical fiber sensor using microfiber-assisted highly birefringent photonic crystal fiber.",
-      "links": [
-        {
-          "text": "DOI",
-          "url": "https://doi.org/10.1109/JSEN.2016.2628912",
-          "icon": "ti-external-link"
-        }
-      ],
-      "bibtex": "@article{dash2017birefringent,\n  author  = {Dash, J. N. and Dass, Sumit and Jha, R.},\n  title   = {Microfiber assisted highly bi-refringent PCF-based interferometric sensors},\n  journal = {IEEE Sensors Journal},\n  volume  = {17},\n  number  = {5},\n  pages   = {1342--1346},\n  year    = {2017}\n}"
     },
     {
       "id": "pub13",
@@ -326,6 +326,103 @@
       "bibtex": ""
     },
     {
+      "id": "conf-2018-jsap",
+      "type": "conference",
+      "title": "Microfiber Attached Polymer Diaphragm as a Versatile Microphone",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong> and R. Jha",
+      "venue": "79th JSAP Autumn Meeting, Nagoya Congress Center, Nagoya, Japan · Paper 21a-211B-9",
+      "year": "2018",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2017-fio",
+      "type": "conference",
+      "title": "Fiber Cantilever Based Acoustic Sensor",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong>, S. Halder, J. Sharma and R. Jha",
+      "venue": "Frontiers in Optics 2017, OSA · Paper JW4A.67",
+      "year": "2017",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2017-cleo",
+      "type": "conference",
+      "title": "Diaphragm Based Single Mode Fiber Taper Acoustic Sensor",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong> and R. Jha",
+      "venue": "Conference on Lasers and Electro-Optics (CLEO) 2017, IEEE",
+      "year": "2017",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2017-wrap",
+      "type": "conference",
+      "title": "Fabrication and Theoretical Analysis of Square Knot Resonator for Sensing Applications",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong> and R. Jha",
+      "venue": "IEEE Workshop on Recent Advances in Photonics (WRAP) 2017",
+      "year": "2017",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2016-photonics",
+      "type": "conference",
+      "title": "Cascaded Taper Mach-Zehnder Interferometer Based Hydrophone",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong> and R. Jha",
+      "venue": "International Conference on Fiber Optics and Photonics (Photonics 2016), OSA · Paper W4G.4",
+      "year": "2016",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2015-fio",
+      "type": "conference",
+      "title": "All SMF Inline Mach-Zehnder Interferometer with Micro Cavity for Curvature Sensing",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong>, J. N. Dash and R. Jha",
+      "venue": "Frontiers in Optics / Laser Science 2015, OSA · Paper FTh3E.5",
+      "year": "2015",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "conf-2011-optics",
+      "type": "conference",
+      "title": "A Novel Optical Fiber Humidity Sensor Coated with Superhydrophilic Silica Nanoparticles",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Published",
+      "authors": "<strong>S. Dass</strong>, R. K. Gangwar, S. M. Nalawade and T. M. Bhave",
+      "venue": "International Conference on Optics (OPTICS 2011), AIP Conference Proceedings 1391, 428",
+      "year": "2011",
+      "links": [
+        {
+          "text": "DOI",
+          "url": "https://doi.org/10.1063/1.3643569",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": ""
+    },
+    {
       "id": "rev2",
       "type": "review",
       "title": "A unified model for instrument-agnostic plankton image classification",
@@ -372,21 +469,6 @@
       "bibtex": "@incollection{dass2026optical,\nauthor = {Dass, S.},\ntitle = {Optical Biosensing Through Surface Plasmon Resonance: A Review of Techniques and Trends},\nbooktitle = {Advanced Photonic Devices for Energy and Sensing Applications},\npublisher = {CRC Press},\nyear = {2026},\nchapter = {8},\ndoi = {10.1201/9781003654667-8}\n}"
     },
     {
-      "id": "patent1",
-      "type": "patent",
-      "title": "Solid core photonic crystal fiber modal interferometer based micro-g accelerometer",
-      "color": "#BA7517",
-      "badgeType": "Patent",
-      "badgeStatus": "Granted",
-      "authors": "R. Jha, <strong>S. Dass</strong>, and J. N. Dash",
-      "venue": "Indian Patent",
-      "year": "2023",
-      "patentNumber": "448718",
-      "patentDate": "31-Aug-2023",
-      "links": [],
-      "bibtex": ""
-    },
-    {
       "id": "patent2",
       "type": "patent",
       "title": "Optical fiber microphone/hydrophone based on cascaded single-mode fiber tapers",
@@ -398,6 +480,21 @@
       "year": "2025",
       "patentNumber": "567538",
       "patentDate": "18-June-2025",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "patent1",
+      "type": "patent",
+      "title": "Solid core photonic crystal fiber modal interferometer based micro-g accelerometer",
+      "color": "#BA7517",
+      "badgeType": "Patent",
+      "badgeStatus": "Granted",
+      "authors": "R. Jha, <strong>S. Dass</strong>, and J. N. Dash",
+      "venue": "Indian Patent",
+      "year": "2023",
+      "patentNumber": "448718",
+      "patentDate": "31-Aug-2023",
       "links": [],
       "bibtex": ""
     },

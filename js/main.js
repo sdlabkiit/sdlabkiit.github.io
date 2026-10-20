@@ -530,7 +530,8 @@ async function renderResearch() {
     const paragraphs = (item.paragraphs || [item.modalDescription || ''])
       .map(p => `<p class="modal-body">${p}</p>`).join('');
 
-    const related = (item.publications || []).map(id => pubById[id]).filter(Boolean);
+    const related = (item.publications || []).map(id => pubById[id]).filter(Boolean)
+      .sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0));
     const relatedHtml = related.length ? `
       <h4 class="modal-subhead">Related publications</h4>
       <ul class="modal-pubs">
@@ -1202,10 +1203,35 @@ async function renderProfile() {
   if (data.webOfScience)
     container.innerHTML += `<a href="${data.webOfScience}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Web of Science"><i class="ti ti-world" aria-hidden="true"></i></a>`;
 }
+// Lab at a glance: counts are computed from the data files, so they stay current
+async function renderGlance() {
+  const grid = document.getElementById('glance-grid');
+  if (!grid) return;
+  const [pubs, team, projects] = await Promise.all([
+    loadJSON('data/publications/publications.json'),
+    loadJSON('data/team/team.json'),
+    loadJSON('data/projects/projects.json')
+  ]);
+  const count = (arr, fn) => (arr || []).filter(fn).length;
+  const stats = [
+    { n: count(pubs, p => p.type === 'journal'), label: 'Journal papers' },
+    { n: count(pubs, p => p.type === 'conference'), label: 'Conference papers' },
+    { n: count(pubs, p => p.type === 'patent'), label: 'Patents' },
+    { n: count(team, m => !m.isOpenPosition && m.status !== 'past' && m.role !== 'Principal Investigator'), label: 'Current students' },
+    { n: count(projects, p => !p.isPlaceholder), label: 'Funded projects', one: 'Funded project' }
+  ];
+  grid.innerHTML = stats.map(s => `
+    <div class="glance-item">
+      <span class="glance-num">${s.n}</span>
+      <span class="glance-label">${s.n === 1 && s.one ? s.one : s.label}</span>
+    </div>`).join('');
+}
+
 // Initializer
 async function initDynamicContent() {
   await Promise.all([
     renderGallery(),
+    renderGlance(),
     renderResearch(),
     renderPublications(),
     renderTeam(),

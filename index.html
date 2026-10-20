@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-  <link rel="stylesheet" href="css/style.css?v=20261020c">
+  <link rel="stylesheet" href="css/style.css?v=20261020d">
 </head>
 <body>
 
@@ -90,6 +90,12 @@
 
       <!-- Slides will be populated dynamically from gallery.json -->
     </div>
+    <button class="g-arrow g-prev" type="button" onclick="changeSlide(-1)" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="g-arrow g-next" type="button" onclick="changeSlide(1)" aria-label="Next image">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
   <div class="gallery-ctrl">
     <button class="gc-btn" id="prev-btn" onclick="changeSlide(-1)" aria-label="Previous slide">
@@ -223,6 +229,6 @@
 <!-- Dynamic modals will be injected here by JS -->
 <div id="dynamic-modals-container"></div>
 
-<script src="js/main.js?v=20261020c"></script>
+<script src="js/main.js?v=20261020d"></script>
 </body>
 </html>

@@ -519,7 +519,7 @@ async function renderResearch() {
   container.innerHTML = '';
   data.forEach(item => {
     container.innerHTML += `
-      <div class="rcard" style="border-top-color:${item.color}" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="${item.id}" onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('${item.id}')}">
+      <div class="rcard" style="border-top-color:${item.color};--c:${item.color}" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="${item.id}" onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('${item.id}')}">
         <div class="rcard-icon"><i class="ti ${item.icon}" style="color:${item.color}" aria-hidden="true"></i></div>
         <div class="rcard-title">${item.title}</div>
         <p class="rcard-desc">${item.description}</p>

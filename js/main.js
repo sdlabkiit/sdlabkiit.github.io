@@ -783,6 +783,28 @@ async function renderTeam() {
             </a>
           ` : ''}
 
+          ${item.github ? `
+            <a href="${item.github}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-brand-github" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
+          ${item.website ? `
+            <a href="${item.website}"
+               class="tlink"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Personal website"
+               onclick="event.stopPropagation()">
+              <i class="ti ti-world" aria-hidden="true"></i>
+            </a>
+          ` : ''}
+
           ${item.facebook ? `
             <a href="${item.facebook}"
                class="tlink"
@@ -867,6 +889,19 @@ async function renderTeam() {
             </p>
           ` : ''}
 
+          ${item.project ? `
+            <p class="modal-body">
+              <strong>Work at SDlab:</strong> ${item.project}
+            </p>
+          ` : ''}
+
+          ${item.awards && item.awards.length ? `
+            <div class="modal-body">
+              <strong>Achievements:</strong>
+              <ul class="modal-list">${item.awards.map(a => `<li>${a}</li>`).join('')}</ul>
+            </div>
+          ` : ''}
+
           ${item.education ? `
             <p class="modal-body">
               <strong>Education:</strong> ${item.education}
@@ -936,6 +971,26 @@ async function renderTeam() {
                  rel="noopener noreferrer">
                 <i class="ti ti-brand-instagram" aria-hidden="true"></i>
                 Instagram
+              </a>
+            ` : ''}
+
+            ${item.github ? `
+              <a href="${item.github}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-brand-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+            ` : ''}
+
+            ${item.website ? `
+              <a href="${item.website}"
+                 class="btn-outline modal-btn"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="ti ti-world" aria-hidden="true"></i>
+                Website
               </a>
             ` : ''}
 
@@ -1203,6 +1258,72 @@ async function renderProfile() {
   if (data.webOfScience)
     container.innerHTML += `<a href="${data.webOfScience}" class="fl fl-link" target="_blank" rel="noopener noreferrer" aria-label="Web of Science"><i class="ti ti-world" aria-hidden="true"></i></a>`;
 }
+// Latest strip: rotates through data/latest/latest.json
+async function renderLatest() {
+  const box = document.getElementById('latest');
+  const link = document.getElementById('latest-item');
+  if (!box || !link) return;
+  const items = await loadJSON('data/latest/latest.json');
+  if (!items || !items.length) return;
+  const count = document.getElementById('latest-count');
+  const bar = document.getElementById('latest-bar');
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const DURATION = 5500;
+  let i = 0, timer = null, paused = false;
+
+  function show(n, dir) {
+    i = (n + items.length) % items.length;
+    const it = items[i];
+    const tag = (it.tag || 'News');
+    link.classList.remove('in');
+    link.classList.add(dir < 0 ? 'out-down' : 'out-up');
+    setTimeout(() => {
+      link.href = it.link || '#news';
+      const external = /^https?:/.test(link.href) && !link.href.startsWith(location.origin);
+      link.target = external ? '_blank' : '';
+      link.rel = external ? 'noopener' : '';
+      link.innerHTML = `<span class="latest-tag" data-tag="${tag.toLowerCase()}">${tag}</span><span class="latest-text">${it.text}</span>`;
+      link.classList.remove('out-up', 'out-down');
+      void link.offsetWidth;
+      link.classList.add('in');
+      count.textContent = `${i + 1}/${items.length}`;
+      restartBar();
+    }, reduce ? 0 : 180);
+  }
+  function restartBar() {
+    if (!bar) return;
+    bar.style.transition = 'none'; bar.style.width = '0%';
+    if (reduce || paused) return;
+    void bar.offsetWidth;
+    bar.style.transition = `width ${DURATION}ms linear`; bar.style.width = '100%';
+  }
+  function schedule() {
+    clearInterval(timer);
+    if (reduce || items.length < 2) return;
+    timer = setInterval(() => { if (!paused) show(i + 1, 1); }, DURATION);
+  }
+  function pause(p) { paused = p; if (p) { bar.style.transition = 'none'; bar.style.width = '0%'; } else { restartBar(); schedule(); } }
+
+  document.getElementById('latest-prev').addEventListener('click', () => { show(i - 1, -1); schedule(); });
+  document.getElementById('latest-next').addEventListener('click', () => { show(i + 1, 1); schedule(); });
+  box.addEventListener('mouseenter', () => pause(true));
+  box.addEventListener('mouseleave', () => pause(false));
+  box.addEventListener('focusin', () => pause(true));
+  box.addEventListener('focusout', () => pause(false));
+  document.addEventListener('visibilitychange', () => pause(document.hidden));
+  let x0 = null;
+  box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { show(i + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); schedule(); }
+  });
+
+  box.hidden = false;
+  show(0, 1);
+  schedule();
+}
+
 // Lab at a glance: counts are computed from the data files, so they stay current
 async function renderGlance() {
   const grid = document.getElementById('glance-grid');
@@ -1232,6 +1353,7 @@ async function initDynamicContent() {
   await Promise.all([
     renderGallery(),
     renderGlance(),
+    renderLatest(),
     renderResearch(),
     renderPublications(),
     renderTeam(),

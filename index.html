@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-  <link rel="stylesheet" href="css/style.css?v=20261020d">
+  <link rel="stylesheet" href="css/style.css?v=20261109b">
 </head>
 <body>
 
@@ -69,6 +69,16 @@
   <div class="hero-eyebrow">SUMIT DASS LABORATORY · KIIT BHUBANESWAR</div>
   <h1 class="hero-title" id="hero-title">3D Imaging &amp;<br>Optical Sensing</h1>
   <p class="hero-desc">SDlab is an interdisciplinary research group at KIIT working where optics meets communication, sensing and biology. We build optical imaging and sensing systems, from digital holography and stereo cameras to optical fiber sensors, and take them from the lab bench to real-world use.</p>
+  <div class="latest" id="latest" role="region" aria-roledescription="carousel" aria-label="Latest from the lab" hidden>
+    <span class="latest-label"><span class="latest-pulse" aria-hidden="true"></span>Latest</span>
+    <div class="latest-viewport" aria-live="polite"><a class="latest-item" id="latest-item" href="#news"></a></div>
+    <div class="latest-ctrl">
+      <button type="button" class="latest-btn" id="latest-prev" aria-label="Previous update"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="latest-count" id="latest-count">1/1</span>
+      <button type="button" class="latest-btn" id="latest-next" aria-label="Next update"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    <span class="latest-progress" aria-hidden="true"><span id="latest-bar"></span></span>
+  </div>
   <div class="hero-cta">
     <a href="mailto:sumit.dassfet@kiit.ac.in?subject=Interested%20in%20joining%20SDlab&amp;body=Dear%20Dr.%20Dass%2C%0A%0AI%20am%20interested%20in%20joining%20SDlab.%0A%0AName%3A%0AProgram%20and%20year%3A%0AArea%20of%20interest%3A%0A%0A(Please%20attach%20your%20CV)" class="btn-primary">Join the Lab</a>
     <a href="#publications" class="btn-outline">View Publications</a>
@@ -229,6 +239,6 @@
 <!-- Dynamic modals will be injected here by JS -->
 <div id="dynamic-modals-container"></div>
 
-<script src="js/main.js?v=20261020d"></script>
+<script src="js/main.js?v=20261109b"></script>
 </body>
 </html>

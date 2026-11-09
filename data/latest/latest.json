@@ -1,0 +1,35 @@
+{
+  "_instruction": "Items shown in the rotating 'Latest' strip at the top of the page, newest first. Keep each text to one short sentence. 'link' can be a section (#news, #publications) or a full URL.",
+  "items": [
+    {
+      "tag": "Award",
+      "text": "Teams HoloBuoy and GEONETRA: national Top 30 and Best Idea (Special Mention), DoT 5G Innovation Hackathon 2026",
+      "link": "#news"
+    },
+    {
+      "tag": "Accepted",
+      "text": "Paper accepted at Photonics 2026, IIT Hyderabad: label-free holographic characterization of mosquito larvae",
+      "link": "#publications"
+    },
+    {
+      "tag": "Accepted",
+      "text": "Paper accepted at IEEE AESPC 2026: low-cost single-camera 3D imaging with a smartphone",
+      "link": "#publications"
+    },
+    {
+      "tag": "Published",
+      "text": "Two papers on D-shaped Zeonex PCF sensors published in the JSAP-Optica Joint Symposia 2026 Abstracts",
+      "link": "https://opg.optica.org/abstract.cfm?uri=JSAPO-2026-8a_A22_2"
+    },
+    {
+      "tag": "Award",
+      "text": "Saanvi Patankar receives the JSAP-Optica Joint Symposia 2026 Travel Award",
+      "link": "#news"
+    },
+    {
+      "tag": "Journal",
+      "text": "In situ stereo imaging of zooplankton published in Limnology and Oceanography: Methods",
+      "link": "#publications"
+    }
+  ]
+}

@@ -292,12 +292,18 @@
       "title": "Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications",
       "color": "#D4537E",
       "badgeType": "Conference",
-      "badgeStatus": "Presented",
+      "badgeStatus": "Published",
       "authors": "S. Patankar, S. Jena, P. Dash and <strong>S. Dass</strong>",
-      "venue": "JSAP–Optica Joint Symposia 2026 (87th JSAP Autumn Meeting), Hokkaido University, Sapporo, Japan · Paper 8a-A22-3",
+      "venue": "JSAP-Optica Joint Symposia 2026 Abstracts (Optica Publishing Group), Sapporo, Japan · Paper 8a_A22_3",
       "year": "2026",
-      "links": [],
-      "bibtex": "@inproceedings{patankar2026dpcf,\n  author    = {Patankar, Saanvi and Jena, Saurav and Dash, Prateekshya and Dass, Sumit},\n  title     = {Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications},\n  booktitle = {JSAP--Optica Joint Symposia 2026},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
+      "links": [
+        {
+          "text": "Optica",
+          "url": "https://opg.optica.org/abstract.cfm?uri=JSAPO-2026-8a_A22_3",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@inproceedings{patankar2026dpcf,\n  author    = {Patankar, Saanvi and Jena, Saurav and Dash, Prateekshya and Dass, Sumit},\n  title     = {Optimization of a D-Shaped PCF Using Multiphysics for Sensing Applications},\n  booktitle = {JSAP-Optica Joint Symposia 2026 Abstracts},\n  publisher = {Optica Publishing Group},\n  pages     = {8a_A22_3},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
     },
     {
       "id": "conf2",
@@ -305,12 +311,18 @@
       "title": "Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor",
       "color": "#D4537E",
       "badgeType": "Conference",
-      "badgeStatus": "Presented",
+      "badgeStatus": "Published",
       "authors": "S. Jena, S. Patankar, P. Dash and <strong>S. Dass</strong>",
-      "venue": "JSAP–Optica Joint Symposia 2026 (87th JSAP Autumn Meeting), Hokkaido University, Sapporo, Japan · Paper 8a-A22-2",
+      "venue": "JSAP-Optica Joint Symposia 2026 Abstracts (Optica Publishing Group), Sapporo, Japan · Paper 8a_A22_2",
       "year": "2026",
-      "links": [],
-      "bibtex": "@inproceedings{jena2026zeonex,\n  author    = {Jena, Saurav and Patankar, Saanvi and Dash, Prateekshya and Dass, Sumit},\n  title     = {Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor},\n  booktitle = {JSAP--Optica Joint Symposia 2026},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
+      "links": [
+        {
+          "text": "Optica",
+          "url": "https://opg.optica.org/abstract.cfm?uri=JSAPO-2026-8a_A22_2",
+          "icon": "ti-external-link"
+        }
+      ],
+      "bibtex": "@inproceedings{jena2026zeonex,\n  author    = {Jena, Saurav and Patankar, Saanvi and Dash, Prateekshya and Dass, Sumit},\n  title     = {Surface Plasmon Activated D-Shaped ZEONEX PCF as Bio-Compatible Refractive Index Sensor},\n  booktitle = {JSAP-Optica Joint Symposia 2026 Abstracts},\n  publisher = {Optica Publishing Group},\n  pages     = {8a_A22_2},\n  address   = {Sapporo, Japan},\n  year      = {2026}\n}"
     },
     {
       "id": "conf3",
@@ -320,7 +332,20 @@
       "badgeType": "Conference",
       "badgeStatus": "Accepted",
       "authors": "<strong>S. Dass</strong> et al.",
-      "venue": "IEEE conference",
+      "venue": "IEEE International Conference on Applied Electromagnetics, Signal Processing and Communication (AESPC 2026)",
+      "year": "2026",
+      "links": [],
+      "bibtex": ""
+    },
+    {
+      "id": "rev1",
+      "type": "conference",
+      "title": "Label-Free Structural and Biological Characterization of Mosquito Larvae via Digital Holography",
+      "color": "#D4537E",
+      "badgeType": "Conference",
+      "badgeStatus": "Accepted",
+      "authors": "A. Dash, A. R. Nayak and <strong>S. Dass</strong>",
+      "venue": "17th International Conference on Fiber Optics &amp; Photonics (Photonics 2026), IIT Hyderabad",
       "year": "2026",
       "links": [],
       "bibtex": ""
@@ -431,19 +456,6 @@
       "badgeStatus": "Under Review",
       "authors": "J. Womack, <strong>S. Dass</strong>, M. E. Bennett and A. R. Nayak",
       "venue": "ICES Journal of Marine Science",
-      "year": "2026",
-      "links": [],
-      "bibtex": ""
-    },
-    {
-      "id": "rev1",
-      "type": "review",
-      "title": "Label-Free Structural and Biological Characterization of Mosquito Larvae via Digital Holography",
-      "color": "#D85A30",
-      "badgeType": "Conference",
-      "badgeStatus": "Submitted",
-      "authors": "A. Dash, A. R. Nayak and <strong>S. Dass</strong>",
-      "venue": "17th International Conference on Fiber Optics &amp; Photonics (Photonics 2026), IIT Hyderabad",
       "year": "2026",
       "links": [],
       "bibtex": ""

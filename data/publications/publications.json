@@ -331,11 +331,11 @@
       "color": "#D4537E",
       "badgeType": "Conference",
       "badgeStatus": "Accepted",
-      "authors": "<strong>S. Dass</strong> et al.",
+      "authors": "S. Jena, D. Sen, D. Das and <strong>S. Dass</strong>",
       "venue": "IEEE International Conference on Applied Electromagnetics, Signal Processing and Communication (AESPC 2026)",
       "year": "2026",
       "links": [],
-      "bibtex": ""
+      "bibtex": "@inproceedings{jena2026singlecam,\n  author    = {Jena, Saurav and Sen, Debarchana and Das, Dipashrita and Dass, Sumit},\n  title     = {A Low-Cost, Single-Camera Approach to 3D Imaging Using Smartphone Camera and a 3D-Printed Stand},\n  booktitle = {IEEE International Conference on Applied Electromagnetics, Signal Processing and Communication (AESPC)},\n  year      = {2026},\n  note      = {Accepted}\n}"
     },
     {
       "id": "rev1",

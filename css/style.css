@@ -1215,7 +1215,12 @@ section, .contact-bar,
   pointer-events: none;
 }
 body { overflow-x: hidden; }
-.hero-title { background: var(--title-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-title {
+  background: var(--title-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  /* room for descenders (p, g, y): gradient text is clipped to the element box */
+  line-height: 1.15; padding: 0.04em 0.06em 0.2em; margin-bottom: 6px;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
 
 .btn-primary { background: linear-gradient(135deg, #534AB7, #378ADD); color: #fff; border: none; border-radius: 999px; box-shadow: 0 6px 18px rgba(83,74,183,.28); }
 .btn-primary:hover { filter: brightness(1.07); box-shadow: 0 8px 22px rgba(83,74,183,.36); }

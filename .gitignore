@@ -1,3 +1,8 @@
 .idea/
 .DS_Store
 Thumbs.db
+
+# Private working files: never publish
+Claude outputs/
+*.xlsx
+*.docx

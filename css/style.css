@@ -1,5 +1,5 @@
 /* ============================================
-   SDlab: Sumit Dass Laboratory
+   SDlab: 3D Imaging & Optical Sensing Lab
    style.css: Full responsive stylesheet
    ============================================ */
 
@@ -202,15 +202,15 @@ section, .contact-bar,
   text-align: center;
 }
 .hero-eyebrow {
-  font-size: 20px;
-  letter-spacing: 0.12em;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
   color: var(--color-text-ter);
   margin-bottom: 14px;
   font-weight: 500;
 }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 56px);
+  font-size: clamp(36px, 5.2vw, 56px);
   font-weight: 500;
   color: var(--color-text-primary);
   line-height: 1.1;
@@ -1003,7 +1003,8 @@ section, .contact-bar,
   .nav-sub  { display: none; }
 
   .hero { padding: 32px var(--page-pad) 24px; }
-  .hero-title { font-size: 28px; }
+  .hero-title { font-size: 38px; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.14em; margin-bottom: 10px; }
   .hero-desc  { font-size: 14.5px; }
 
   .hero-cta {
@@ -1042,7 +1043,7 @@ section, .contact-bar,
    ============================================ */
 @media (max-width: 340px) {
   .team-grid { grid-template-columns: 1fr; }
-  .hero-title { font-size: 24px; }
+  .hero-title { font-size: 32px; }
 }
 
 /* ============================================

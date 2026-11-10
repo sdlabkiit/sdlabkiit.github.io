@@ -1,5 +1,5 @@
 /* ============================================
-   SDlab: Sumit Dass Laboratory
+   SDlab: 3D Imaging & Optical Sensing Lab
    main.js: All interactive functionality
    ============================================ */
 

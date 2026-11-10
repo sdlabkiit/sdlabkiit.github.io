@@ -1,6 +1,6 @@
 # SDlab website
 
-Source for **https://sdlabkiit.github.io**, the website of SDlab (Sumit Dass Laboratory), School of Electronics Engineering, KIIT University.
+Source for **https://sdlabkiit.github.io**, the website of the 3D Imaging & Optical Sensing Lab (SDlab), School of Electronics Engineering, KIIT University.
 
 ## Updating content
 

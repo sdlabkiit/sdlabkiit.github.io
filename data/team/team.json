@@ -341,9 +341,9 @@
       "photo": "data/team/Prateekshya.jpg",
       "color": "#E6F1FB",
       "textColor": "#0C447C",
-      "email": "",
+      "email": "prateekshyad4@gmail.com",
       "googleScholar": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/prateekshya-dash-68180a126",
       "orcid": "",
       "twitter": "",
       "instagram": "",
@@ -352,11 +352,14 @@
       "webOfScience": "",
       "association": "",
       "modalSubtitle": "M.Tech. · SDlab alumna",
-      "modalDescription": "Prateekshya Dash completed her M.Tech. under the guidance of Dr. Sumit Dass (2020–2022). She is a co-author of the lab's 2026 papers on D-shaped Zeonex photonic crystal fiber sensors.",
-      "education": "M.Tech.",
-      "currentPosition": "",
+      "modalDescription": "I completed my M.Tech. in Communication Systems Engineering, where I designed a Zeonex-based D-shaped SC-PCF refractive index sensor using COMSOL. I now work in automotive software engineering, ADAS and vehicle system validation, and I am passionate about emerging automotive innovations, intelligent mobility and continuous learning.",
+      "education": "M.Tech. Communication Systems Engineering",
+      "currentPosition": "System Developer Senior Analyst",
       "isOpenPosition": false,
-      "status": "past"
+      "status": "past",
+      "github": "https://github.com/prateekshyadash",
+      "project": "Zeonex-based D-shaped photonic crystal fiber refractive index sensor (COMSOL); co-author of the lab's Zeonex PCF sensor papers",
+      "awards": []
     }
   ]
 }
